@@ -230,7 +230,7 @@ postrender["Display Right Sidebar Contents"] = function (content, taskName) {
 	
 	To unstow the bar use:
 	<<removeclass "#right-ui-bar" "stowed">>
-*/</script><tw-tag name="STRANGE_PLACE" color="gray"></tw-tag><tw-passagedata pid="1" name="BETTYS_LIVING_ROOM" tags="JULIANN ROOM" position="600,500" size="100,100">&lt;&lt;nobr&gt;&gt;
+*/</script><tw-tag name="STRANGE_PLACE" color="gray"></tw-tag><tw-passagedata pid="1" name="BETTYS_LIVING_ROOM" tags="JULIANN ROOM" position="600,600" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Betty&#39;s Living Room&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -238,14 +238,14 @@ postrender["Display Right Sidebar Contents"] = function (content, taskName) {
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;\
-&lt;h2 class=&#39;passage-header&#39;&gt;$locationName&lt;/h2&gt;\</tw-passagedata><tw-passagedata pid="2" name="BETTYS_BACKYARD" tags="JULIANN ROOM" position="600,600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;h2 class=&#39;passage-header&#39;&gt;$locationName&lt;/h2&gt;\</tw-passagedata><tw-passagedata pid="2" name="BETTYS_BACKYARD" tags="JULIANN ROOM" position="600,700" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Betty&#39;s Backyard&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="3" name="StoryRightSidebar" tags="" position="400,525" size="100,100">&lt;h2&gt;$locationName&lt;/h2&gt;\
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="3" name="StoryRightSidebar" tags="" position="175,375" size="100,100">&lt;h2&gt;$locationName&lt;/h2&gt;\
 $terror
 &lt;&lt;showmeter $terrorMeter ($terror / 100)&gt;&gt;
 
@@ -305,22 +305,31 @@ ROOM GRAPH
 	&lt;&lt;print &quot;[&quot; + &quot;[&quot; + Object.keys($roomGraph)[$i] + &quot;]&quot; + &quot;]&quot;&gt;&gt;
 &lt;&lt;/for&gt;&gt;\
 &lt;&lt;unset $i&gt;&gt;
-*/</tw-passagedata><tw-passagedata pid="4" name="JULIANNS_APARTMENT" tags="JULIANN ROOM" position="600,700" size="100,100">&lt;&lt;nobr&gt;&gt;
+*/</tw-passagedata><tw-passagedata pid="4" name="JULIANNS_APARTMENT" tags="JULIANN ROOM" position="600,800" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Juliann&#39;s Apartment&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="5" name="CURTIS_ST_BEDROOM" tags="CURTIS_ST ROOM" position="725,600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="5" name="CURTIS_ST_BEDROOM" tags="CURTIS_ST ROOM" position="725,675" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Your bedroom at Curtis St.&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
+	&lt;&lt;set $b1Enabled to true&gt;&gt;
+	&lt;&lt;set $b2Enabled to true&gt;&gt;
+	&lt;&lt;set $b3Enabled to true&gt;&gt;
+	&lt;&lt;set $b4Enabled to true&gt;&gt;
+	&lt;&lt;set $b5Enabled to true&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;\
-&lt;h2 class=&#39;passage-header&#39;&gt;$locationName&lt;/h2&gt;\</tw-passagedata><tw-passagedata pid="6" name="CURTIS_ST_DOWN_DOWNSTAIRS" tags="CURTIS_ST ROOM" position="725,475" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;h2 class=&#39;passage-header&#39;&gt;$locationName&lt;/h2&gt;\
+You shared it with Vincent until you left for college. Well, that&#39;s not quite accurate. You shared it with Vincent until you moved onto the couch, and stayed on the couch until you left for college. But you spent the majority of your childhood sleeping in this room.
+
+In retrospect, it seems kind of strange that your parents had their daughter and son share a room into their teenage years. The house wasn&#39;t wanting for rooms. On the other hand, you and Vincent never came into conflict. They probably didn&#39;t want to incite a tantrum.
+&lt;&lt;include [[CST_BEDROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="CURTIS_ST_DOWN_DOWNSTAIRS" tags="CURTIS_ST ROOM" position="725,550" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Down Downstairs at Curtis St.&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -334,12 +343,12 @@ ROOM GRAPH
   &lt;&lt;set $canRetreat to true&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;\
 &lt;h2 class=&#39;passage-header&#39;&gt;$locationName&lt;/h2&gt;\
-When you were fighting with your parents, you abandoned your room. You slept on the couch in the TV room, which you liked better than your bed. You don&#39;t remember why. You mostly remember rage, mixed with depression. Maybe depression, mixed with rage. Who knows?
+This was the TV room, with the one TV in the house, where Mom watched her Chinese action movies and Dad watched his basketball games. You and your brother played video games and watched anime.
 
-You slept on the couch for nearly five years.
+For a while you slept the on couches instead of your bed, by your own choice. You don&#39;t remember why. You mostly remember rage, mixed with depression. Maybe depression, mixed with rage. Who knows?
 
-You&#39;d play video games, deep in the night, when your parents were asleep and couldn&#39;t chastise you. You thought they didn&#39;t know. Of course they knew. They were just tired of fighting with you.
-&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="CURTIS_ST_MIDDLE_BATHROOM" tags="CURTIS_ST ROOM" position="725,700" size="100,100">&lt;&lt;nobr&gt;&gt;
+Sometimes you&#39;d play video games, deep in the night, when your parents were asleep and couldn&#39;t chastise you. You thought they didn&#39;t know. Of course they knew. They were just tired of fighting with you.
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="CURTIS_ST_MIDDLE_BATHROOM" tags="CURTIS_ST ROOM" position="725,800" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;The Middle Bathroom&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -354,21 +363,21 @@ You&#39;d play video games, deep in the night, when your parents were asleep and
 &lt;&lt;/nobr&gt;&gt;\
 &lt;h2 class=&#39;passage-header&#39;&gt;$locationName&lt;/h2&gt;\
 This was your favorite bathroom when you were growing up (the house had three). The shower was nice and hot, there was plenty of countertop near the sink, and the mirror was huge and pristine.
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="ASTHMA_HOSPITAL_EMERGENCY_ROOM" tags="HOSPITAL ROOM" position="1100,500" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="ASTHMA_HOSPITAL_EMERGENCY_ROOM" tags="HOSPITAL ROOM" position="1450,500" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;St. Antony&#39;s Hospital, Emergency Room&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="9" name="ASTHMA_HOSPITAL_WARD" tags="HOSPITAL ROOM" position="1100,600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="9" name="ASTHMA_HOSPITAL_WARD" tags="HOSPITAL ROOM" position="1450,600" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;St. Antony&#39;s Hospital, Ward&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="10" name="STRANGE_PLACE_SPIDERS" tags="STRANGE_PLACE ROOM" position="1225,500" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="10" name="STRANGE_PLACE_SPIDERS" tags="STRANGE_PLACE ROOM" position="1575,500" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Somewhere Strange&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -385,14 +394,14 @@ You are standing in a bedroom you know intimately, yet have never seen. Cobwebs 
 This is not your bedroom.
 
 You feel faint, hot - feverish? A memory of a fever?
-&lt;&lt;include [[SPIDER_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="STRANGE_PLACE_ET" tags="STRANGE_PLACE ROOM" position="1225,600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;include [[SPIDER_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="STRANGE_PLACE_ET" tags="STRANGE_PLACE ROOM" position="1575,600" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Somewhere Strange&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="12" name="STRANGE_PLACE_VOLCANO" tags="STRANGE_PLACE ROOM" position="1225,700" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="12" name="STRANGE_PLACE_VOLCANO" tags="STRANGE_PLACE ROOM" position="1575,700" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Somewhere Strange&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -402,7 +411,7 @@ You feel faint, hot - feverish? A memory of a fever?
 &lt;&lt;/nobr&gt;&gt;\
 It&#39;s a hallway, but the only door is behind you. Instead, there are stairs with three-foot steps, too tall to walk.
 
-TODO: this!</tw-passagedata><tw-passagedata pid="13" name="STRANGE_PLACE_LEECHES" tags="STRANGE_PLACE ROOM" position="1225,800" size="100,100">&lt;&lt;nobr&gt;&gt;
+TODO: this!</tw-passagedata><tw-passagedata pid="13" name="STRANGE_PLACE_LEECHES" tags="STRANGE_PLACE ROOM" position="1575,800" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Somewhere Strange&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -423,8 +432,8 @@ TODO: this!</tw-passagedata><tw-passagedata pid="13" name="STRANGE_PLACE_LEECHES
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="16" name="INTRO" tags="" position="400,400" size="100,100">/* Shunt to the first room */
-&lt;&lt;goto $currentRoom&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="TEST_STUFF" tags="" position="400,625" size="100,100">@@#buttonOne;&lt;&lt;button &quot;Button One&quot;&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="16" name="INTRO" tags="" position="175,250" size="100,100">/* Shunt to the first room */
+&lt;&lt;goto $currentRoom&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="TEST_STUFF" tags="" position="175,475" size="100,100">@@#buttonOne;&lt;&lt;button &quot;Button One&quot;&gt;&gt;
   &lt;&lt;run $(&quot;#buttonOne button&quot;).prop(&quot;disabled&quot;, true)&gt;&gt;
 &lt;&lt;/button&gt;&gt;@@
 
@@ -437,7 +446,7 @@ TODO: this!</tw-passagedata><tw-passagedata pid="13" name="STRANGE_PLACE_LEECHES
 	&lt;&lt;print &quot;[&quot; + &quot;[&quot; + $list[$i].title + &quot;]&quot; + &quot;]&quot;&gt;&gt;
 &lt;&lt;/for&gt;&gt;\
 &lt;&lt;unset $list, $i&gt;&gt;
-</tw-passagedata><tw-passagedata pid="18" name="StoryInit" tags="" position="400,300" size="100,100">&lt;&lt;include [[custom-macros]]&gt;&gt;
+</tw-passagedata><tw-passagedata pid="18" name="StoryInit" tags="" position="175,150" size="100,100">&lt;&lt;include [[custom-macros]]&gt;&gt;
 &lt;&lt;include [[CONSTANTS]]&gt;&gt;
 &lt;&lt;include [[INITIALIZE]]&gt;&gt;
 &lt;&lt;include [[ROOM_FNS]]&gt;&gt;
@@ -447,7 +456,7 @@ TODO: this!</tw-passagedata><tw-passagedata pid="13" name="STRANGE_PLACE_LEECHES
 &lt;&lt;script&gt;&gt;
 State.prng.init(&#39;0&#39;);
 &lt;&lt;/script&gt;&gt;
-</tw-passagedata><tw-passagedata pid="19" name="SPIDER_BED" tags="" position="1275,375" size="100,100">&lt;&lt;set $canLeave to false&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="19" name="SPIDER_BED" tags="" position="1625,375" size="100,100">&lt;&lt;set $canLeave to false&gt;&gt;\
 &lt;h2 class=&#39;passage-header&#39;&gt;Fever Fatigue&lt;/h2&gt;\
 You&#39;re burning up, dizzy. You try to examine the bed. Your head spins and you collapse, raising a cloud of dust.
 
@@ -458,11 +467,11 @@ The light buzzes against your brain. Too bright, by far.
 &lt;&lt;updateTerror 1&gt;&gt;\
 &lt;hr&gt;
 &lt;&lt;button [[&#39;Keep your eyes open.&#39;|SPIDER_EYES_OPEN]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[&#39;Close your eyes.&#39;|SPIDER_EYES_CLOSED]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="SPIDER_CORNERS" tags="" position="1375,375" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Checking Corners&lt;/h2&gt;\
+&lt;&lt;button [[&#39;Close your eyes.&#39;|SPIDER_EYES_CLOSED]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="SPIDER_CORNERS" tags="" position="1725,375" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Checking Corners&lt;/h2&gt;\
 Cobwebs. Thick, heavy. No, you&#39;d rather not. What about the walls?
 
 White. Normal. Some kind of stucco? Just like the walls in the California second house. Fragile, then enough to punch through. You don&#39;t even need to be that angry.
-&lt;&lt;include [[SPIDER_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="SPIDER_BUTTONS" tags="" position="1350,500" size="100,100">&lt;hr&gt;
+&lt;&lt;include [[SPIDER_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="SPIDER_BUTTONS" tags="" position="1700,500" size="100,100">&lt;hr&gt;
 &lt;&lt;if $b1Enabled&gt;&gt;\
   &lt;&lt;button [[&#39;Examine the bed.&#39;|SPIDER_BED]]&gt;&gt;
     &lt;&lt;set $b1Enabled to false&gt;&gt;
@@ -480,7 +489,7 @@ White. Normal. Some kind of stucco? Just like the walls in the California second
 &lt;&lt;nobr&gt;&gt;
   &lt;&lt;run $(&#39;#examineBed button&#39;).prop(&#39;disabled&#39;, true)&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="22" name="MIDDLE_BATHROOM_BUTTONS" tags="" position="850,700" size="100,100">&lt;hr&gt;
+</tw-passagedata><tw-passagedata pid="22" name="MIDDLE_BATHROOM_BUTTONS" tags="" position="725,925" size="100,100">&lt;hr&gt;
 &lt;&lt;if not hasVisited(&#39;MBR_MIRROR_1&#39;)&gt;&gt;\
   &lt;&lt;button [[&#39;Look in the mirror.&#39;|MBR_MIRROR_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;elseif $b1Enabled&gt;&gt;\
@@ -527,7 +536,7 @@ White. Normal. Some kind of stucco? Just like the walls in the California second
 &lt;&lt;nobr&gt;&gt;
   &lt;&lt;run $(&#39;#examineBed button&#39;).prop(&#39;disabled&#39;, true)&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-</tw-passagedata><tw-passagedata pid="23" name="MBR_MIRROR_1" tags="" position="650,825" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Ugly Asian&lt;/h2&gt;\
+</tw-passagedata><tw-passagedata pid="23" name="MBR_MIRROR_1" tags="" position="525,1050" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Ugly Asian&lt;/h2&gt;\
 Did you really look like that, back then? Or is that what you think you would have looked like, if you could remember? You don&#39;t know. You screamed at your parents whenever they took your picture. The only ones you have are family photos, taken with your extended family. Of course you didn&#39;t scream then. That would have been disgraceful.
 
 But you never looked at those photos.
@@ -543,7 +552,7 @@ Obsessive? Yes. But numbers are numbers, and you didn&#39;t weigh enough to look
   &quot;Screaming at the camera.&quot;,
   &quot;They just wanted pictures of their kids.&quot;,
   13, 0, 100&gt;&gt;\
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="MBR_SINK" tags="" position="750,825" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Wasting Water&lt;/h2&gt;\
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="MBR_SINK" tags="" position="625,1050" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Wasting Water&lt;/h2&gt;\
 You listen to it run.
 
 It&#39;s a nice sink. Mom kept it clean. Very clean. She&#39;d be ashamed if she saw yours.
@@ -551,7 +560,7 @@ It&#39;s a nice sink. Mom kept it clean. Very clean. She&#39;d be ashamed if she
 You turn it off.
 
 It&#39;s a dream. Does it matter? Still, habit.
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="MBR_SHOWER_1" tags="" position="850,825" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;The Shower&lt;/h2&gt;\
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="MBR_SHOWER_1" tags="" position="725,1050" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;The Shower&lt;/h2&gt;\
 Spacious. Nice. Clean. Just how you remember it.
 
 For a while, the plumbing was kind of broken and it would never go below a certain heat.
@@ -559,13 +568,13 @@ For a while, the plumbing was kind of broken and it would never go below a certa
 The heat was fine by you. You liked hot showers. The dermatologist said you shouldn&#39;t take hot showers, and you shouldn&#39;t take long showers, but you defied both commandments.
 
 Your skin hated you. You went through so much moisturizing cream. The shower&#39;s weren&#39;t the only reason, of course, but they contributed.
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="MBR_TOILET" tags="" position="950,825" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Always Spotless&lt;/h2&gt;\
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="MBR_TOILET" tags="" position="825,1050" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Always Spotless&lt;/h2&gt;\
 Everybody in the house was very clean, that Mom made sure of. Of the three bathrooms in the house, this toilet was the largest and sturdiest. The one in the down downstairs bathroom was functional, but seemed old and rickety, and the one on the top floor was for your parents.
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="MBR_TRASH" tags="" position="1050,825" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Like Clockwork&lt;/h2&gt;\
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="MBR_TRASH" tags="" position="925,1050" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Like Clockwork&lt;/h2&gt;\
 Mom would empty every trash bin in the house every night. She washed dishes, did laundry, and cleaned the house like it was her job. Well, you suppose it was, to her.
 
 You appreciate it, now. Time helped. But you will never tell her that.
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="MBR_SHOWER_2" tags="" position="850,925" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Safe Haven&lt;/h2&gt;\
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="MBR_SHOWER_2" tags="" position="725,1150" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Safe Haven&lt;/h2&gt;\
 You turn the heat to its highest. You take a towel from the towel cabinet and lay it down on the floor. Your clothes go on the counter.
 
 You sit on the floor and listen to the shower.
@@ -581,7 +590,7 @@ Steam fills the room. You pull your knees up to your chest, close your eyes, tim
   &quot;Running the shower.&quot;,
   &quot;You&#39;re back in middle school, sitting on a towel on the floor, warm steam surrounding you, listening to the hissing of the shower, a place where nobody will bother you and nothing bad can happen.&quot;,
   -10, 0, 100&gt;&gt;\
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="MBR_SHOWER_3" tags="" position="850,1025" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Shower Thoughts&lt;/h2&gt;\
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="MBR_SHOWER_3" tags="" position="725,1250" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Shower Thoughts&lt;/h2&gt;\
 You take a towel from the cabinet and hang it on the hook. You step in, pull the curtains behind you.
 
 The water is hot, almost too hot. Certainly too hot to be healthy. You take the soap (special soap, soft on the skin, as recommended by the dermatologist) and rub your arms. Little flakes of white detritus slough off your disgusting body. You&#39;ll have to cover yourself in cream when you get out. You leave the heat be.
@@ -605,19 +614,19 @@ You rinse out your hair. You close your eyes. You let the water wash all your wo
   &quot;Taking a shower.&quot;,
   &quot;Once you just sat on the floor of the shower under its too-hot water for something like an hour and a half.\n\nWhy do you remember that fondly? That&#39;s an absurd thing to remember fondly.&quot;,
   -7, 0, 100&gt;&gt;\
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="MBR_SHOWER_4" tags="" position="850,1125" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Bizarre, Really&lt;/h2&gt;\
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="MBR_SHOWER_4" tags="" position="725,1350" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Bizarre, Really&lt;/h2&gt;\
 Mom and Dad never commented on your showers.
 
 That&#39;s weird, right? That&#39;s weird. If I had a kid and they were spending two hours running the shower, I&#39;d - I&#39;d be worried, at least. Right?
 
 They probably noticed. They probably just didn&#39;t want to argue about it.
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="MBR_MIRROR_2" tags="" position="650,925" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Not Beautiful&lt;/h2&gt;\
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="MBR_MIRROR_2" tags="" position="525,1150" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Not Beautiful&lt;/h2&gt;\
 You aren&#39;t in love with how you look now. But you don&#39;t hate it.
 
 No. That&#39;s a lie.
 
 But you don&#39;t let it cripple you.
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="MEMORY_FNS" tags="" position="275,500" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="MEMORY_FNS" tags="" position="50,350" size="100,100">&lt;&lt;script&gt;&gt;
 
 setup.addMemory = function(title, text, terrorDelta, terrorMin, terrorMax) {
   const memories = State.variables.memories;
@@ -648,7 +657,7 @@ setup.addMemory = function(title, text, terrorDelta, terrorMin, terrorMax) {
     &lt;div class=&#39;player-info&#39;&gt;[ Memory forgotten: $forgotten.title ]&lt;/div&gt;\
   &lt;&lt;/if&gt;&gt;\
   &lt;div class=&#39;player-info&#39;&gt;[ Memory added: $args[0] ]&lt;/div&gt;\
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="ROOM_FNS" tags="" position="275,400" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="ROOM_FNS" tags="" position="50,250" size="100,100">&lt;&lt;script&gt;&gt;
 
 /* onRoomEntered is required to be called by each passage on entry */
 setup.onRoomEntered = function(passageTitle, passageTitleText) {
@@ -714,12 +723,12 @@ setup.onRoomExit = function(passageTitle, direction) {
   Engine.play(chosenNextRoom);
 }
 
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="custom-macros" tags="" position="400,175" size="100,100">&lt;&lt;script&gt;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="custom-macros" tags="" position="175,25" size="100,100">&lt;&lt;script&gt;&gt;
 // meters.min.js, for SugarCube 2, by Chapel
 // v1.0.1, 2021-04-20, 53d1a20e9321b3782a303cf7dbe00f5c51e947db
 ;!function(){&quot;use strict&quot;;var t=!0,e=!1,s=!1,i={full:&quot;#2ECC40&quot;,empty:&quot;#FF4136&quot;,back:&quot;#DDDDDD&quot;,height:&quot;12px&quot;,width:&quot;180px&quot;,animate:400,easing:&quot;swing&quot;,text:&quot;#111111&quot;,label:&quot;&quot;,align:&quot;center&quot;},n=[&quot;center&quot;,&quot;left&quot;,&quot;right&quot;],r=[&quot;swing&quot;,&quot;linear&quot;];function a(t,e){return t&amp;&amp;&quot;string&quot;==typeof t&amp;&amp;(t=t.toLowerCase().trim())?t:e||&quot;&quot;}function o(t){return t&lt;.5?2*t*t:(4-2*t)*t-1}function l(t,e){if(!(this instanceof l))return new l(t,e);var s=clone(i);this.settings=Object.assign(s,t),this.settings.align=a(this.settings.align),this.settings.easing=a(this.settings.easing),n.includes(this.settings.align)||(this.settings.align=&quot;center&quot;),r.includes(this.settings.easing)||(this.settings.easing=&quot;swing&quot;),e=Number(e),Number.isNaN(e)&amp;&amp;(e=1),e=Math.clamp(e,0,1),this.value=e;var h=$(document.createElement(&quot;div&quot;)).addClass(&quot;chapel-meter&quot;).attr({&quot;data-val&quot;:e,&quot;data-label&quot;:this.settings.label}).css({position:&quot;relative&quot;,&quot;background-color&quot;:this.settings.back,height:this.settings.height,width:this.settings.width,overflow:&quot;hidden&quot;}),g=$(document.createElement(&quot;div&quot;)).addClass(&quot;meter-label&quot;).css({top:0,right:0,&quot;font-size&quot;:this.settings.height,&quot;font-weight&quot;:&quot;bold&quot;,&quot;line-height&quot;:&quot;100%&quot;,width:&quot;100%&quot;,height:&quot;100%&quot;,&quot;vertical-align&quot;:&quot;middle&quot;,&quot;text-align&quot;:this.settings.align,color:this.settings.text,&quot;z-index&quot;:1,position:&quot;relative&quot;,bottom:&quot;100%&quot;}).wiki(this.settings.label).appendTo(h),u=$(document.createElement(&quot;div&quot;)).addClass(&quot;meter-top&quot;).css({&quot;background-color&quot;:this.settings.full,opacity:o(this.value),width:&quot;100%&quot;,height:&quot;100%&quot;,&quot;z-index&quot;:0}),c=$(document.createElement(&quot;div&quot;)).addClass(&quot;meter-bottom&quot;).css({position:&quot;absolute&quot;,top:0,left:0,&quot;background-color&quot;:this.settings.empty,opacity:1,width:100*this.value+&quot;%&quot;,height:&quot;100%&quot;,&quot;z-index&quot;:0}).append(u).appendTo(h);this.$element=h,this.$bars={top:u,bottom:c},this.$label=g,g.css(&quot;font-size&quot;,parseInt(h.css(&quot;height&quot;),10)&lt;parseInt($(&quot;.passage&quot;).css(&quot;font-size&quot;),10)?h.css(&quot;height&quot;):$(&quot;.passage&quot;).css(&quot;font-size&quot;)),g.css(&quot;line-height&quot;,h.css(&quot;height&quot;))}Object.assign(l,{_list:new Map,is:function(t){return t instanceof l},has:function(t){return l._list.has(t)&amp;&amp;l.is(l._list.get(t))},get:function(t){return l.has(t)?l._list.get(t):null},del:function(t){l.has(t)&amp;&amp;l._list.delete(t)},add:function(t,s,i){if(!l.has(t)||e){Object.assign(s,{id:t});var n=new l(s,i);return l._list.set(t,n),n}console.error(&#39;Meter &quot;&#39;+t+&#39;&quot; already exists.&#39;)},_emit:function(t,e){l.is(t)&amp;&amp;t.$element.trigger({type:&quot;:&quot;+e,meter:t})}}),Object.assign(l.prototype,{constructor:l,_label:function(t){var e=this;function s(){e.$label.empty().wiki(e.settings.label),e.$label.css(&quot;font-size&quot;,parseInt(e.$element.css(&quot;height&quot;),10)&lt;parseInt(e.$element.parent().css(&quot;font-size&quot;),10)?e.$element.css(&quot;height&quot;):e.$element.parent().css(&quot;font-size&quot;)),e.$label.css(&quot;line-height&quot;,e.$element.css(&quot;height&quot;))}return t?setTimeout(s,Engine.minDomActionDelay):s(),this},_width:function(){var t=this;return this.$bars.bottom.animate({width:100*this.value+&quot;%&quot;},this.settings.animate,this.settings.easing,(function(){l._emit(t,&quot;meter-animation-complete&quot;)})),this},_color:function(){return this.$bars.top.animate({opacity:o(this.value)},this.settings.animate,this.settings.easing),this},animate:function(){return l._emit(this,&quot;meter-animation-start&quot;),this._color()._width()._label()},val:function(t){return void 0!==t&amp;&amp;(t=Number(t),Number.isNaN(t)&amp;&amp;(t=1),t=Math.clamp(t,0,1),this.value=t,this.animate()),this.value},options:function(t){return t&amp;&amp;&quot;object&quot;==typeof t&amp;&amp;Object.assign(this.settings,t),this.settings},unwrap:function(){return this.$element[0]},place:function(t,e){var s=$(document.createElement(&quot;span&quot;));return t instanceof jQuery||(t=$(t)),t[0]||console.warn(&quot;meter#place() -&gt; no valid target&quot;),e&amp;&amp;&quot;object&quot;==typeof e&amp;&amp;(e.classes&amp;&amp;(Array.isArray(e.classes)||&quot;string&quot;==typeof e.classes)&amp;&amp;s.addClass(e.classes),e.attr&amp;&amp;&quot;object&quot;==typeof e.attr&amp;&amp;s.attr(e.attr)),t.append(s.append(this.$element)),this._label(!0),this},on:function(t,e){return&quot;function&quot;!=typeof e?this:t&amp;&amp;&quot;string&quot;==typeof t&amp;&amp;t.trim()?(t=t.split(&quot; &quot;).map((function(t){return(t=t.split(&quot;.&quot;)[0])+&quot;.userland&quot;})).join(&quot; &quot;),this.$element.on(t,e),this):this},one:function(t,e){return&quot;function&quot;!=typeof e?this:t&amp;&amp;&quot;string&quot;==typeof t&amp;&amp;t.trim()?(t=t.split(&quot; &quot;).map((function(t){return(t=t.split(&quot;.&quot;)[0])+&quot;.userland&quot;})).join(&quot; &quot;),this.$element.one(t,e),this):this},off:function(t){return t=t&amp;&amp;&quot;string&quot;==typeof t&amp;&amp;t.trim()?t.split(&quot; &quot;).map((function(t){return(t=t.split(&quot;.&quot;)[0])+&quot;.userland&quot;})).join(&quot; &quot;):&quot;.userland&quot;,this.$element.off(t),this},click:function(t,e){return this.$element.ariaClick(t,e),this},clone:function(){return new l(this.settings,this.value)},toJSON:function(){return JSON.reviveWrapper(&quot;new setup.Meter(&quot;+JSON.stringify(this.settings)+&quot;, &quot;+this.value+&quot;)&quot;)}}),setup.Meter=l,t&amp;&amp;(window.Meter=window.Meter||l),Macro.add(&quot;newmeter&quot;,{tags:[&quot;colors&quot;,&quot;sizing&quot;,&quot;animation&quot;,&quot;label&quot;],handler:function(){if(State.length&gt;0&amp;&amp;!s)return this.error(&quot;The &#96;&lt;&lt;newmeter&gt;&gt;&#96; macro must be called in your &#96;StoryInit&#96; special passage. Seriously. No excuses. --Love, Chapel&quot;);if(this.args.length&lt;1)return this.error(&quot;The &#96;&lt;&lt;newmeter&gt;&gt;&#96; macro requires at least one argument: a meter name.&quot;);var t=this.args[0],i=null,n=null,r=null,a=null;if(&quot;string&quot;!=typeof t)return this.error(&quot;Invalid meter name.&quot;);if(t=t.trim(),l.has(t)&amp;&amp;!e)return this.error(&#39;Cannot clobber the existing meter &quot;&#39;+t+&#39;&quot;.&#39;);this.payload.length&amp;&amp;(i=this.payload.find((function(t){return&quot;colors&quot;===t.name})),n=this.payload.find((function(t){return&quot;sizing&quot;===t.name})),r=this.payload.find((function(t){return&quot;animation&quot;===t.name})),a=this.payload.find((function(t){return&quot;label&quot;===t.name})));var o={};if(i){if(!i.args.length)return this.error(&quot;No arguments passed to the &#96;&lt;&lt;colors&gt;&gt;&#96; tag.&quot;);switch(i.args.length){case 1:o.empty=i.args[0],o.full=&quot;transparent&quot;;break;case 2:o.full=i.args[0],o.empty=i.args[1];break;default:o.full=i.args[0],o.empty=i.args[1],o.back=i.args[2]}}if(n){if(!n.args.length)return this.error(&quot;No arguments passed to the &#96;&lt;&lt;sizing&gt;&gt;&#96; tag.&quot;);o.width=n.args[0],n.args[1]&amp;&amp;(o.height=n.args[1])}if(r){if(!r.args.length)return this.error(&quot;No arguments passed to the &#96;&lt;&lt;animation&gt;&gt;&#96; tag.&quot;);if(&quot;boolean&quot;!=typeof r.args[0]||r.args[0]){if(&quot;string&quot;!=typeof r.args[0])return this.error(&quot;The argument to the &#96;&lt;&lt;animation&gt;&gt;&#96; tag should be &#96;true&#96;, &#96;false&#96;, or a valid CSS time value.&quot;);o.animate=Util.fromCssTime(r.args[0])}else o.animate=0;r.args[1]&amp;&amp;[&quot;swing&quot;,&quot;linear&quot;].includes(r.args[1])&amp;&amp;(o.easing=r.args[1])}if(a){var h=a.args[0];if(!h||&quot;string&quot;!=typeof h)return this.error(&quot;The labelText argument for the &#96;&lt;&lt;label&gt;&gt;&#96; tag is required.&quot;);o.label=h.trim(),a.args[1]&amp;&amp;&quot;string&quot;==typeof a.args[1]&amp;&amp;(o.text=a.args[1]),a.args[2]&amp;&amp;&quot;string&quot;==typeof a.args[2]&amp;&amp;(o.align=a.args[2])}l.add(t,o,this.args[1])}}),Macro.add(&quot;showmeter&quot;,{handler:function(){if(this.args.length&lt;1)return this.error(&quot;This macro requires at least one argument: the meter&#39;s name.&quot;);var t=this.args[0];if(&quot;string&quot;!=typeof t)return this.error(&quot;Invalid meter name.&quot;);t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error(&#39;The meter &quot;&#39;+t+&#39;&quot; does not exist.&#39;);&quot;number&quot;==typeof this.args[1]&amp;&amp;e.val(this.args[1]),e.place(this.output,{classes:&quot;macro-&quot;+this.name,attr:{id:&quot;meter-&quot;+Util.slugify(t)}})}}),Macro.add(&quot;updatemeter&quot;,{handler:function(){if(this.args.length&lt;2)return this.error(&quot;This macro requires two arguments: the meter&#39;s name and a value.&quot;);var t=this.args[0];if(&quot;string&quot;!=typeof t)return this.error(&quot;Invalid meter name.&quot;);t=t.trim();var e=l.get(t);if(!e||!l.is(e))return this.error(&#39;The meter &quot;&#39;+t+&#39;&quot; does not exist.&#39;);e.val(this.args[1])}})}();
 // end meters.min.js
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="TERROR" tags="" position="275,600" size="100,100">&lt;&lt;set $terrorMeter to &#39;TERROR_METER&#39;&gt;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="TERROR" tags="" position="50,450" size="100,100">&lt;&lt;set $terrorMeter to &#39;TERROR_METER&#39;&gt;&gt;
 &lt;&lt;newmeter $terrorMeter 0.5&gt;&gt;
   &lt;&lt;colors &#39;#DC143C&#39; &#39;#D3D3D3&#39; &#39;#F8F8FF&#39;&gt;&gt;
 &lt;&lt;/newmeter&gt;&gt;
@@ -734,7 +743,7 @@ setup.onRoomExit = function(passageTitle, direction) {
     &lt;&lt;set $_dt to $args[0] * -1&gt;&gt;\
     &lt;div class=&#39;player-info&#39;&gt;[ Your terror has decreased by $_dt. ]&lt;/div&gt;\
   &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;\</tw-passagedata><tw-passagedata pid="36" name="INITIALIZE" tags="" position="275,300" size="100,100">/* Initialize terror */
+&lt;&lt;/widget&gt;&gt;\</tw-passagedata><tw-passagedata pid="36" name="INITIALIZE" tags="" position="50,150" size="100,100">/* Initialize terror */
 &lt;&lt;set $terror to 50&gt;&gt;
 
 /* Initialize memory inventory */
@@ -760,7 +769,7 @@ setup.onRoomExit = function(passageTitle, direction) {
   east: undefined,
   south: undefined,
   west: undefined
-}&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="CONSTANTS" tags="" position="275,200" size="100,100">&lt;&lt;script&gt;&gt;
+}&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="CONSTANTS" tags="" position="50,50" size="100,100">&lt;&lt;script&gt;&gt;
 
 const directionsToOpposites = {
   north: &quot;south&quot;,
@@ -794,7 +803,7 @@ setup.passageTitleToTag = function(t) {
   return passageTitlesToTags[t];
 }
 
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="SPIDER_EYES_OPEN" tags="" position="1225,250" size="100,100">&lt;&lt;set $canLeave to false&gt;&gt;\
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="SPIDER_EYES_OPEN" tags="" position="1575,250" size="100,100">&lt;&lt;set $canLeave to false&gt;&gt;\
 &lt;h2 class=&#39;passage-header&#39;&gt;Burning Bright&lt;/h2&gt;\
 You&#39;re not staring at the light, of course. That would be silly. You watch the corners, the sides of the ceiling.
 
@@ -808,7 +817,7 @@ It grows, grows, grows, and its long, long legs span the ceiling and reach down 
 &lt;&lt;button [[&#39;Scream for help!&#39;|SPIDER_SCREAM]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;button [[&#39;Get up and run!&#39;|SPIDER_RUN]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="39" name="SPIDER_EYES_CLOSED" tags="" position="1325,250" size="100,100">&lt;&lt;set $canLeave to false&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="39" name="SPIDER_EYES_CLOSED" tags="" position="1675,250" size="100,100">&lt;&lt;set $canLeave to false&gt;&gt;\
 &lt;h2 class=&#39;passage-header&#39;&gt;SPIRALING DOWN&lt;/h2&gt;\
 The light&#39;s gone, but now you feel like you&#39;re spinning, first slowly, then quickly, and then you&#39;re spinning and falling into the bed and -
 
@@ -820,74 +829,122 @@ Out from the corner crawls a shadow. You barely notice it at first. Then it craw
 &lt;hr&gt;
 &lt;&lt;button [[&#39;Close your eyes, and keep them shut!&#39;|SPIDER_EYES_SHUT]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;button [[&#39;Scream for help!&#39;|SPIDER_SCREAM]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;button [[&#39;Get up and run!&#39;|SPIDER_RUN]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="SPIDER_EYES_SHUT" tags="" position="1275,125" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Glued Shut&lt;/h2&gt;\
+&lt;&lt;button [[&#39;Get up and run!&#39;|SPIDER_RUN]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="SPIDER_EYES_SHUT" tags="" position="1625,125" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Glued Shut&lt;/h2&gt;\
 The world revolves, and it&#39;s worse now, and you&#39;re spinning, hands gripping the sheets, but you&#39;ve somehow become disconnected from the bed and the bed&#39;s flapping off into space, but you can&#39;t open your eyes, you can&#39;t! and bile rises in your throat and - eyes open, and those long, long legs wrap themselves around your bed; you gurgle in terror; clicking mandibles descend from the ceiling -
 
 &lt;&lt;updateTerror 5&gt;&gt;\
 &lt;hr&gt;
-&lt;&lt;button [[&quot;That&#39;s where the memory stops.&quot;|SPIDER_END]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="SPIDER_SCREAM" tags="" position="1375,125" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Screaming Silently&lt;/h2&gt;\
+&lt;&lt;button [[&quot;That&#39;s where the memory stops.&quot;|SPIDER_END]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="SPIDER_SCREAM" tags="" position="1725,125" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Screaming Silently&lt;/h2&gt;\
 You scream and cry but your body does not listen to you, and all that emerges is a weak mewling. You close your eyes, but the world spins, you feel your stomach coming up; you open your eyes, and those long, long legs wrap themselves around your bed; you close your eyes, grit your teeth, fall, moan, trash; you open your eyes and clicking mandibles descend from the ceiling -
 
 &lt;&lt;updateTerror 5&gt;&gt;\
 &lt;hr&gt;
-&lt;&lt;button [[&quot;That&#39;s where the memory stops.&quot;|SPIDER_END]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="SPIDER_RUN" tags="" position="1175,125" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Feverish, Bedridden&lt;/h2&gt;\
+&lt;&lt;button [[&quot;That&#39;s where the memory stops.&quot;|SPIDER_END]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="SPIDER_RUN" tags="" position="1525,125" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Feverish, Bedridden&lt;/h2&gt;\
 You try to throw off the sheets, but you succeed only in tangling yourself. You try to roll off the side, but your body is small and your Mom made the bed too tightly. Now those long, long legs wrap themselves around your bed, and your furious scream emerges as a bloated gurgle. Clicking mandibles descend from the ceiling -
 
 &lt;&lt;updateTerror 5&gt;&gt;\
 &lt;hr&gt;
-&lt;&lt;button [[&quot;That&#39;s where the memory stops.&quot;|SPIDER_END]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="SPIDER_END" tags="" position="1275,0" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Common Knowledge&lt;/h2&gt;\
+&lt;&lt;button [[&quot;That&#39;s where the memory stops.&quot;|SPIDER_END]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="SPIDER_END" tags="" position="1625,0" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Common Knowledge&lt;/h2&gt;\
 Nobody ever asked you why you were scared of spiders. Why would they? Girls are scared of spiders. Everybody knows that.
 
 Who knows. Maybe that&#39;s just how it is. Maybe you&#39;d just end up scared of spiders anyways. If you did, hopefully it would be in a less traumatic fashion.
 
 You had a roommate who would trap them in a cup and dump them outside. First you thought she was brave, but then you realized that it&#39;s only brave if you&#39;re afraid.
 &lt;hr&gt;
-&lt;&lt;button [[&quot;Silly, isn&#39;t it?&quot;|STRANGE_PLACE_SPIDERS]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="DOWN_DOWNSTAIRS_BUTTONS" tags="" position="850,475" size="100,100">&lt;hr&gt;
+&lt;&lt;button [[&quot;Silly, isn&#39;t it?&quot;|STRANGE_PLACE_SPIDERS]]&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="DOWN_DOWNSTAIRS_BUTTONS" tags="" position="725,425" size="100,100">&lt;hr&gt;
 &lt;&lt;if not hasVisited(&#39;DDS_BIG_TV_1&#39;)&gt;&gt;\
-  &lt;&lt;button [[&#39;Inspect the TV.&#39;|DDS_BIG_TV_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;elseif not hasVisited(&#39;DDS_BIG_TV_2&#39;)&gt;&gt;\
-  &lt;&lt;button [[&#39;Turn the TV on.&#39;|DDS_BIG_TV_2]]&gt;&gt;
+  &lt;&lt;button [[&quot;The TV: It&#39;s just how you remember it.&quot;|DDS_BIG_TV_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif $b1Enabled&gt;&gt;\
+  &lt;&lt;button [[&#39;The TV: Will it turn on?&#39;|DDS_BIG_TV_2]]&gt;&gt;
     &lt;&lt;set $b1Enabled to false&gt;&gt;
   &lt;&lt;/button&gt;&gt;
 &lt;&lt;else&gt;&gt;\
-  &lt;button disabled&gt;Turn the TV on.&lt;/button&gt;
+  &lt;button disabled&gt;The TV: There&#39;s nothing on right now.&lt;/button&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if not hasVisited(&#39;DDS_COUCH_1&#39;)&gt;&gt;\
-  &lt;&lt;button [[&#39;Sit on the couch.&#39;|DDS_COUCH_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;button [[The couch: When did you start sleeping here?|DDS_COUCH_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;elseif not hasVisited(&#39;DDS_COUCH_2&#39;)&gt;&gt;\
-  &lt;&lt;button [[&#39;Lie down on the couch.&#39;|DDS_COUCH_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;button [[The couch: You slept on the couch after college, too.|DDS_COUCH_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;elseif $b2Enabled&gt;&gt;\
-  &lt;&lt;button [[&#39;Contemplate the couch.&#39;|DDS_COUCH_3]]&gt;&gt;
+  &lt;&lt;button [[The couch: Don&#39;t dwell on it.|DDS_COUCH_3]]&gt;&gt;
     &lt;&lt;set $b2Enabled to false&gt;&gt;
   &lt;&lt;/button&gt;&gt;
 &lt;&lt;else&gt;&gt;\
-  &lt;button disabled&gt;Contemplate the couch.&lt;/button&gt;
+  &lt;button disabled&gt;The couch: Leave it alone.&lt;/button&gt;
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;if not hasVisited(&#39;DDS_PS2_1&#39;)&gt;&gt;\
-  &lt;&lt;button [[&#39;Check out the Playstation 2.&#39;|DDS_PS2_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;button [[The Playstation 2: How nostalgic.|DDS_PS2_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;elseif not hasVisited(&#39;DDS_PS2_2&#39;)&gt;&gt;\
-  &lt;&lt;button [[&#39;Hook the Playstation 2 up.&#39;|DDS_PS2_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;button [[The Playstation 2: Did they keep all the wires and controllers?|DDS_PS2_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;elseif not hasVisited(&#39;DDS_PS2_3&#39;)&gt;&gt;\
-  &lt;&lt;button [[&#39;Start the Playstation 2.&#39;|DDS_PS2_3]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+  &lt;&lt;button [[&#39;The Playstation 2: Start it up.&#39;|DDS_PS2_3]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;elseif $b3Enabled&gt;&gt;\
-  &lt;&lt;button [[&#39;Fiddle with the Playstation 2.&#39;|DDS_PS2_4]]&gt;&gt;
+  &lt;&lt;button [[&#39;The Playstation 2: Maybe you can fiddle with it?&#39;|DDS_PS2_4]]&gt;&gt;
     &lt;&lt;set $b3Enabled to false&gt;&gt;
   &lt;&lt;/button&gt;&gt;
 &lt;&lt;else&gt;&gt;\
-  &lt;button disabled&gt;Fiddle with the Playstation 2.&lt;/button&gt;
+  &lt;button disabled&gt;The Playstation 2: No games for you.&lt;/button&gt;
 &lt;&lt;/if&gt;&gt;\
-EntityBlueprint.CURTIS_STREET_SMALL_PLASITC_TRASH_BIN,
-            EntityBlueprint.CURTIS_STREET_BIG_TV,
-            EntityBlueprint.CURTIS_STREET_GAMECUBE,
-            EntityBlueprint.CURTIS_STREET_PLAYSTATION,
-            EntityBlueprint.CURTIS_STREET_ANIME_SHELF,
-            EntityBlueprint.CURTIS_STREET_DDS_COUCH,
-            EntityBlueprint.CURTIS_STREET_DDS_COUCH,
-            EntityBlueprint.CURTIS_STREET_DDS_COUCH</tw-passagedata><tw-passagedata pid="45" name="DDS_BIG_TV_2" tags="" position="650,250" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Dead Channel&lt;/h2&gt;\
+&lt;&lt;if not hasVisited(&#39;DDS_GC_1&#39;)&gt;&gt;\
+  &lt;&lt;button [[The Gamecube: Vincent loved this thing.|DDS_GC_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif not hasVisited(&#39;DDS_GC_2&#39;)&gt;&gt;\
+  &lt;&lt;button [[The Gamecube: Does it still work?|DDS_GC_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif $b4Enabled&gt;&gt;\
+  &lt;&lt;button [[&#39;The Gamecube: What else do you remember?&#39;|DDS_GC_3]]&gt;&gt;
+    &lt;&lt;set $b4Enabled to false&gt;&gt;
+  &lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+  &lt;button disabled&gt;The Gamecube: You have fond memories of it.&lt;/button&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if not hasVisited(&#39;DDS_ANIME_1&#39;)&gt;&gt;\
+  &lt;&lt;button [[&#39;The anime shelf: You can barely remember what you bought.&#39;|DDS_ANIME_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif not hasVisited(&#39;DDS_ANIME_2&#39;)&gt;&gt;\
+  &lt;&lt;button [[&#39;The anime shelf: It could be tidier.&#39;|DDS_ANIME_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif $b5Enabled&gt;&gt;\
+  &lt;&lt;button [[&#39;The anime shelf: You spent so much time on it.&#39;|DDS_ANIME_3]]&gt;&gt;
+    &lt;&lt;set $b5Enabled to false&gt;&gt;
+  &lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+  &lt;button disabled&gt;The anime shelf: The you who did something else would be a different you.&lt;/button&gt;
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="45" name="DDS_BIG_TV_2" tags="" position="525,200" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Dead Channel&lt;/h2&gt;\
 Unfortunate. It looks like dreams don&#39;t get cable.
 
-Oh well. It&#39;d probably be playing Judge Judy or a True Crime show anyways. Mom watches so much Judge Judy.
-&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="DDS_COUCH_1" tags="" position="750,350" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="DDS_COUCH_2" tags="" position="750,250" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="48" name="DDS_BIG_TV_1" tags="" position="650,350" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Unreasonably Large&lt;/h2&gt;\
+Oh well. It&#39;d probably be playing Judge Judy or a True Crime show anyways. Mom watched so much Judge Judy. Still does.
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="DDS_COUCH_1" tags="" position="625,300" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Middle School&lt;/h2&gt;\
+The third year. First it was intermittent. Then you did it more, and at some point you simply abandoned your bed, migrating your blankets permanently into the down-downstairs. When you parents asked you what you were doing, you yelled at them. When they asked you why they were doing it, you yelled at them some more.
+
+You don&#39;t remember what you yelled. You only remember what you felt when you yelled it.
+
+For several years, before he became so infirm he had to go to an assisted living facility, Grandpa was living in the house with you. The guest bedroom is behind the TV room, and he&#39;d often retire when he saw you getting ready for bed. You felt a sort of shame and anger every time he walked into his room, not at him, but at yourself, for failing so badly at being normal that you couldn&#39;t even sleep in your own bed.
+
+God. What were you thinking? Surely there was some rationale. Yet all you can recall is rage and resentment and a creeping terror that you thought you&#39;d left behind.
+
+Forget about it, all right? You were depressed. You can&#39;t logic your way through depression.
+
+&lt;&lt;updateTerror 1&gt;&gt;\
+&lt;&lt;addMemory
+  &quot;Middle school misery.&quot;,
+  &quot;Your parents didn&#39;t mind that you slept on the couch, but it hurt them when you yelled at them about it. You never apologized. Of course you know you should!\n\nYou know you won&#39;t.&quot;,
+  6, 0, 100&gt;&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="DDS_COUCH_2" tags="" position="625,200" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;No Job&lt;/h2&gt;\
+You never learned how to find one. They didn&#39;t teach you that in college. You got a few interviews, but they went poorly.
+
+You can&#39;t blame the interviewers. At best, you were low in self-confidence. At worst, you were neurotic and self-flagellating. You wouldn&#39;t have hired yourself either.
+
+God! You could have at least hidden it for a few hours. No. No, you really couldn&#39;t.
+
+So you stewed and rotted and that feeling of failure grew from a seed to a wonderful garden, and the more you felt it the worse you did. The longer you took to find a job, the worse it looked to employers. Eventually, they started asking it about. Eventually, you gave up, resigned yourself to an eternity of wasted days and shameful nights, a shadow in the corners of your parents&#39; house.
+
+You got your first job through nepotism, actually. One of Dad&#39;s friends. It worked. Your Dad may have given you hopelessly outdated advice in the job hunt, but he was right about one thing. Once you have a job, it&#39;s a lot easier to get the next one. You&#39;ve had three, now, and every time you change jobs it almost breaks you.
+
+Some of your friends have quit their jobs without another one lined up. You would never do that. That creeping shame is always there, lurking, waiting, ready to strike.
+
+&lt;&lt;updateTerror 3&gt;&gt;\
+&lt;&lt;addMemory
+  &quot;Jobless after college.&quot;,
+  &quot;One of you coworkers asked why you put up with so much shit at work, when you could definitely get a better, less abusive job. You laughed. You tried to play it off.\n\nThat evening you opened Indeed and got as far as a single job search before an immense headache broke out. You slept badly that night. You haven&#39;t tried since.&quot;,
+  11, 0, 100&gt;&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="DDS_BIG_TV_1" tags="" position="525,300" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Unreasonably Large&lt;/h2&gt;\
 Very modern. No DVD player. No VCR player.
 
 Come on. Nobody uses VCR players anymore. When was the last time you used a VCR? Cesario, in college?
@@ -909,7 +966,11 @@ What a strange person you are.
   &quot;A movie with Cesario.&quot;,
   &quot;Honestly? You were probably cranky and angry the whole time. Cesario, you deserved better.&quot;,
   -7, 0, 100&gt;&gt;\
-&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="DDS_COUCH_3" tags="" position="750,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="DDS_PS2_1" tags="" position="850,350" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Playing Together&lt;/h2&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="DDS_COUCH_3" tags="" position="625,100" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Just Misery?&lt;/h2&gt;\
+No. There were some good times here. It&#39;s the same couch you used to watch anime with Vincent, and play games after school. It&#39;s not all bad.
+
+But it&#39;s best to leave it there.
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="DDS_PS2_1" tags="" position="725,300" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Playing Together&lt;/h2&gt;\
 For a most of elementary school and the early years of middle school you&#39;d come home and play games with Vincent, before he started making his own friends. Most of the games you played by taking turns. You had a promise that neither of you would play through any of the stories without the other. Grinding was fine, random exploration was fine, but for any story content you had to have your sibling. If your sibling wasn&#39;t there, you played something else.
 
 Sometimes you&#39;d play competitive games. He loved Armored Core. He beat you all the time, despite the fact that you were three years older. He learned faster. He reacted faster. And he practiced.
@@ -921,10 +982,10 @@ He was a lot better than you at video games. In a lot of other ways, too. You wi
   &quot;Gaming with Vincent.&quot;,
   &quot;You played together almost every day, for years. One of your fondest childhood memories.&quot;,
   -15, 0, 100&gt;&gt;\
-&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="DDS_PS2_2" tags="" position="850,250" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Playing Alone&lt;/h2&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="DDS_PS2_2" tags="" position="725,200" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Playing Alone&lt;/h2&gt;\
 The cables are in the cabinet, under the TV, where your parents shoved all your consoles when Vincent left for college. You hook up the power and the controllers.
 
-One night in middle school you decided, in what you can only remember as an extended tantrum, to stay up all night playing Final Fantasy X. You don&#39;t quite remember what motivated this. Spite, at your parents&#39; 1-hour limit on games? Burning resentment at the fact that you&#39;d have to go to school the next morning? Obsessive escapism? Who knows.
+One night in middle school you decided, in what you can only describe as an extended tantrum, to stay up all night playing Final Fantasy X. You don&#39;t quite remember what motivated this. Spite towards your parents? Burning resentment at the fact that you&#39;d have to go to school the next morning? Desperate escapism? Who knows.
 
 You turned the sound off, so your parents wouldn&#39;t wake up, and played straight until dawn. You don&#39;t remember what happened on the next day, but it can&#39;t have been pleasant, for you or anybody around you.
 
@@ -937,7 +998,7 @@ Or maybe you&#39;re more like your middle school self than you like to think.
   &quot;Final Fantasy X.&quot;,
   &quot;You were obsessed with Yuna, in a way that feels a mortifying to remember. You wanted to be like her &lt;em&gt;so badly.&lt;/em&gt;\n\nA couple of years out of college, you were chatting with one of your co-workers about video games. Somehow, Final Fantasy X came up. He made an offhand remark, something about Yuna having a death wish, and you laughed, but...honestly? It fits. You were pretty suicidal back then.&quot;,
   -7, 0, 100&gt;&gt;\
-&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="DDS_PS2_3" tags="" position="850,150" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Never Finished&lt;/h2&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="DDS_PS2_3" tags="" position="725,100" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Never Finished&lt;/h2&gt;\
 It starts, but for some reason it can&#39;t detect the disk. You open the disk tray. Interesting. It&#39;s &lt;em&gt;The Legend of Dragoon,&lt;/em&gt; the only game the two of you never finished.
 
 It was a JRPG, so it was very long. It had four disks. Vincent and you (but mostly Vincent) got maybe two-thirds through the game, but there was a particular boss fight with some floating girl that froze up.
@@ -951,11 +1012,157 @@ Eventually you reasoned that the disk must be broken. So, that was the only game
   &quot;The Legend of Dragoon.&quot;,
   &quot;After you&#39;d gone off to college, Vincent hunted down another copy and ended up beating it. You play games, still, quite a lot of them, but you hardly ever finish them. Vincent still finishes almost everything he plays, though he&#39;s pretty selective with what he starts.&quot;,
   -2, 0, 100&gt;&gt;\
-&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="DDS_PS2_4" tags="" position="850,50" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Broken Reader&lt;/h2&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="DDS_PS2_4" tags="" position="725,0" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Broken Reader&lt;/h2&gt;\
 You try turning it off and on again. You cycle through a few of the old games that are still stacked in the back of the cabinet. You thump it a couple of times, on the logic that this is a dream and so maybe all those jokes about percussive maintenance will work.
 
 Nope. The Playstation 2 remains broken. Oh well.
-&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata></tw-storydata>
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="DDS_GC_1" tags="" position="825,300" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Smash Bros&lt;/h2&gt;\
+Vincent was insanely good at Smash. You couldn&#39;t hold a candle to him. He watched Smash videos, he practiced, he apparently played it a lot with his friends. He explained wavedashing to you a few times, but you kept forgetting. He was such a saintly little brother.
+
+In college he played in some Smash tournaments. At some point he even played in some of the big tournaments - you weren&#39;t up to date with the competitive scene, but it existed, and he played in a couple of them. He never won, but that was still leagues ahead of anybody else you knew.
+
+Sometimes you&#39;d just sit on the couch and watch him practice.
+
+&lt;&lt;updateTerror -4&gt;&gt;\
+&lt;&lt;addMemory
+  &quot;Watching Vincent practice.&quot;,
+  &quot;Those were good times.\n\nHe made a bunch of friends in college through gaming. They were roommates. They still keep in touch, still play games together online. You haven&#39;t spoken to anybody from college since you graduated.\n\nVincent was always much more social than you.&quot;,
+  -8, 0, 100&gt;&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="DDS_GC_2" tags="" position="825,200" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Animal Crossing&lt;/h2&gt;\
+You laugh when you see what game your dream decided to give you. Of all games, &lt;em&gt;Animal Crossing?&lt;/em&gt;
+
+You played it some, but it started to stress you out, after a while. The gyroids were a little creepy, but that wasn&#39;t it. It was the way the clock ticked on, inevitably. One time you didn&#39;t play for a couple of weeks - not sure why, maybe your parents had shipped you off to summer camp or dragged you on a vacation - and when you logged back in, the game called you out for ignoring it.
+
+That&#39;s your main memory of the game. Shame, at failing the fictional characters, and anger, because that was a cheap trick, game, what the fuck are you doing, and then that anger turned inwards and you berated yourself for falling for such a cheap trick. You took the disk and hid it at the back of the cabinet.
+
+When Vincent asked you where the disk was you lied. Said you didn&#39;t know. He searched for a while then shrugged. You&#39;re not sure if he believed you, but if he didn&#39;t he never called you on it.
+
+That seems like it should be a grim memory, but you can&#39;t help but laugh at how fickle and tempestuous your young self was.
+
+&lt;&lt;updateTerror -1&gt;&gt;\
+&lt;&lt;addMemory
+  &quot;&#39;Losing&#39; Animal Crossing.&quot;,
+  &quot;To be fair to your younger self, it is absolutely emotionally manipulative to have the characters in a game guilt trip the player for not playing. Your anger wasn&#39;t wrong, just...comically overdone. Mountains and molehills and all that.&quot;,
+  -1, 0, 100&gt;&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="DDS_GC_3" tags="" position="825,100" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Not Much&lt;/h2&gt;\
+You played some &lt;em&gt;Metroid&lt;/em&gt;, but only the first one. Vincent played all the other ones. Both of you played &lt;em&gt;Wind Waker.&lt;/em&gt;
+
+Oh! There was &lt;em&gt;Star Fox.&lt;/em&gt; What was the full name? &lt;em&gt;Star Fox: Adventures?&lt;/em&gt; No. Adventures had Krystal, that was something else. &lt;em&gt;Star Fox: Assault?&lt;/em&gt; You liked that one, because you could play multiplayer, and Vincent wasn&#39;t as good at it as he was at Smash, so you could stand a chance. That was probably the game you played the most.
+
+But that&#39;s pretty much it.
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="DDS_ANIME_1" tags="" position="925,300" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Too Messy!&lt;/h2&gt;\
+All the titles are disorganized, cases from one series mixed semi-randomly, some cases vertical, others horizontal. And there&#39;s manga mixed in, with no discernable pattern.
+
+You don&#39;t know if you&#39;d call them classics. That implies a level of distinction and cultural acknowledgement that the &lt;em&gt;X&lt;/em&gt; TV series might not have achieved, despite its very pretty cast. &lt;em&gt;Cardcaptor Sakura&lt;/em&gt; has a better chance. You were a pretty big CLAMP fan (and still are) - an all-woman circle? Cool then, cool now. You even hunted down English copies of &lt;em&gt;RG Veda,&lt;/em&gt; which was extemely pretty despite being their first work. There&#39;s &lt;em&gt;Evangelion&lt;/em&gt; there, and if that isn&#39;t classic you don&#39;t know what is. Ah! Here&#39;s that set of bootleg &lt;em&gt;Zeta Gundam&lt;/em&gt; DVDs that you bought off the internet on the casual mention of classmates (you weren&#39;t even friends), subtitled by some enterprising souls with an uncertain grasp on either Japanese, English, or both.
+
+Really, should have hunted down some fansubs on that one.
+
+This section seems to be all manga. &lt;em&gt;Fruits Basket, X/1999, Bleach, Copernicus&#39; Breath, A Bride&#39;s Story&lt;/em&gt; - hang on. You stored your manga in the upstairs shelves. And &lt;em&gt;Copernicus&#39; Breath&lt;/em&gt; is...not something that ever got an English publication. Furthermore, &lt;em&gt;Copernicus&#39; Breath&lt;/em&gt; &lt;em&gt;A Bride&#39;s Story&lt;/em&gt; are outside of the timeframe, and you never owned physical copies of either.
+
+Come on! Whoever&#39;s putting this dream together has a lot to answer for!
+
+&lt;&lt;addMemory
+  &quot;Zeta Gundam? Seriously?&quot;,
+  &quot;You&#39;re not even a Gundam fan! You bought it because a few of the people at the first (and only) High School anime club meeting were talking about it and you were so socially inept that such a simple, offhand conversation translated to an iron blanket of peer pressure.\n\nThen the club just never met again.\n\nOnce you had it, though, you watched it. The whole thing. Sunk cost fallacy, maybe. You suspected that there were at least three people working on the translation, because there were three sets of name spellings and language quirks.\n\nYou never brought it up to anybody. You worried they&#39;d think you were weird for doing that.&quot;,
+  -1, 0, 100&gt;&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="DDS_ANIME_2" tags="" position="925,200" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Slow Going&lt;/h2&gt;\
+Every time you right a diagonal case, or order a series, you look back and find something new in the empty space.
+
+Now there are &lt;em&gt;Pokemon&lt;/em&gt; DVDs (which you never owned; you watched it on TV with your brother), &lt;em&gt;Baccano!&lt;/em&gt; DVDs (which aired long after you&#39;d left home), &lt;em&gt;Naruto...&lt;/em&gt;
+
+God. You watched &lt;em&gt;Naruto.&lt;/em&gt; Why did you start watching that, anyways? Because it was the thing to watch? Then once you&#39;d started...I mean, you ended up liking it. So it&#39;s all good, right?
+
+You joined an online roleplaying forum for Naruto. God, you haven&#39;t thought about that for so long. You were really into it, too. Crazy into it. It went all through high school. You didn&#39;t eat lunch with the other kids. Instead, you&#39;d walk home and make a frozen dinner and watch an episode of whatever show you were watching, mostly &lt;em&gt;Naruto,&lt;/em&gt; and then walk back to school. The benefits of an open lunch school, you guess.
+
+God! You want to go back in time and grab past-you and shake her and yell, &quot;EAT LUNCH WITH OTHER PEOPLE, KID! And while you&#39;re at it, make some female friends! And be nicer to your parents! Also you&#39;re clinically depressed, go get a diagnosis! And sleep more! Try out rock climbing, you&#39;ll like it in the future!&quot;
+
+Of course past-you would probably just bite you and scurry away. Also, grabbing somebody and shaking them while yelling is assault. Also, yelling random advice at people rarely helps anything.
+
+It&#39;s a funny mental image, at least.
+
+&lt;&lt;updateTerror -1&gt;&gt;\
+&lt;&lt;addMemory
+  &quot;High school lunches.&quot;,
+  &quot;There were at least a few times when you ate lunch with other people. Sometimes you did homework with other kids, mostly in the AP classes. One time, some of the nerds in your AP Statistics class started a D&amp;D game, and they invited you. You turned them down. You had thought that they were only inviting you because you were a girl.\n\nYou were a real vicious little kid. You can&#39;t really muster any rancor for your past self. How could she have known better?&quot;,
+  -1, 0, 100&gt;&gt;\
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="DDS_ANIME_3" tags="" position="925,100" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Sparking Joy?&lt;/h2&gt;\
+Maybe it did; maybe it didn&#39;t. You certainly enjoyed it, and you have some residual fondness now. You still read terrible trashy villainess isekai, after all! It&#39;s part of you. Still. If you could have gone back and redirected your younger self into something else, like basketball or rock climbing or fanfiction writing, maybe that would have been better.
+
+Oh well. It is what it is.
+&lt;&lt;include [[DOWN_DOWNSTAIRS_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="CST_BEDROOM_BUTTONS" tags="" position="850,675" size="100,100">&lt;hr&gt;
+&lt;&lt;if not hasVisited(&#39;CBR_YBED_1&#39;)&gt;&gt;\
+  &lt;&lt;button [[Your bed: There&#39;s a hole in the wall here.|CBR_YBED_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif not hasVisited(&#39;CBR_YBED_2&#39;)&gt;&gt;\
+  &lt;&lt;button [[Your bed: Your mom called the police.|CBR_YBED_2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif $b1Enabled&gt;&gt;\
+  &lt;&lt;button [[Your bed: Leave it well enough alone.|CBR_YBED_3]]&gt;&gt;
+    &lt;&lt;set $b1Enabled to false&gt;&gt;
+  &lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+  &lt;button disabled&gt;Your bed: There&#39;s nothing good here.&lt;/button&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if not hasVisited(&#39;CBR_VBED_1&#39;)&gt;&gt;\
+  &lt;&lt;button [[Vincent&#39;s bed: Same as it always was.|CBR_VBED_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif $b2Enabled&gt;&gt;\
+  &lt;&lt;button [[Vincent&#39;s bed: In retrospect, that was deeply creepy of you.|CBR_VBED_2]]&gt;&gt;
+    &lt;&lt;set $b2Enabled to false&gt;&gt;
+  &lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+  &lt;button disabled&gt;Vincent&#39;s bed: Vincent was a saint.&lt;/button&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if not hasVisited(&#39;CBR_DRESSER_1&#39;)&gt;&gt;\
+  &lt;&lt;button [[Your dresser: You&#39;ve had it for as long as you can remember.|CBR_DRESSER_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif $b3Enabled&gt;&gt;\
+  &lt;&lt;button [[Your dresser: You&#39;ll keep it until it dies or you do.|CBR_DRESSER_2]]&gt;&gt;
+    &lt;&lt;set $b3Enabled to false&gt;&gt;
+  &lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+  &lt;button disabled&gt;Your dresser: Funny how you&#39;re so attached to it.&lt;/button&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $b4Enabled&gt;&gt;\
+  &lt;&lt;button [[Your desk: You hardly used it.|CBR_YDESK]]&gt;&gt;
+    &lt;&lt;set $b4Enabled to false&gt;&gt;
+  &lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+  &lt;button disabled&gt;Your desk: You have no idea what happened to it.&lt;/button&gt;
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if not hasVisited(&#39;CBR_VDESK_1&#39;)&gt;&gt;\
+  &lt;&lt;button [[Vincent&#39;s desk: It was well-used.|CBR_VDESK_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;elseif $b5Enabled&gt;&gt;\
+  &lt;&lt;button [[Vincent&#39;s desk: You feel so useless compared to him.|CBR_VDESK_2]]&gt;&gt;
+    &lt;&lt;set $b5Enabled to false&gt;&gt;
+  &lt;&lt;/button&gt;&gt;
+&lt;&lt;else&gt;&gt;\
+  &lt;button disabled&gt;Vincent&#39;s desk: It&#39;s still in your parents&#39; house somewhere.&lt;/button&gt;
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="61" name="CBR_YBED_1" tags="" position="975,475" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Weak Walls&lt;/h2&gt;\
+You&#39;re lucky you didn&#39;t hit a stud. Your parents patched the hole, but the patch left a mark. The paint doesn&#39;t quite match.
+
+You remember a conversation with a therapist once. This was before you made the hole. You were talking about anger management. You told her you might hit a wall, but if you did, you&#39;d put a pillow in front of it, so you wouldn&#39;t accidentally hurt your hand. You remember feeling so smug, thinking that &lt;em&gt;obviously&lt;/em&gt; nobody needed to worry about you injuring yourself by hitting a wall. You thought that that was the reason they were talking to you about hitting the wall, and if you just proved you wouldn&#39;t injure yourself they&#39;d let you leave.
+
+God, did you really think that? How did anybody take you seriously at all?
+
+This is hilarious to you in hindsight, but to your parents, it was heartbreaking.
+
+&lt;&lt;updateTerror 3&gt;&gt;\
+&lt;&lt;addMemory
+  &quot;Hand versus wall.&quot;,
+  &quot;It was bad, but the whole absurdity of you bragging about not punching a wall barehanded and then doing literally that is just too much.&quot;,
+  -1, 0, 100&gt;&gt;\
+&lt;&lt;include [[CST_BEDROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="CBR_YBED_2" tags="" position="1075,475" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Different Time&lt;/h2&gt;\
+She called them when you &quot;attempted&quot; suicide, not when you hit the wall. Kind of farcial. You sat in bed with an exacto knife and scored your wrists. Didn&#39;t break skin. Mostly to spite Mom. Scare her.
+
+It worked.
+
+She called the police. She shouted over the phone that they needed to come take you away. They asked her what you were doing. She told her that you were sitting in your room was suicidal. You think they asked her if you were dangerous or actively attempting suicide or something, and she said no, but she was barely coherent and kept insisting they come to take you away. You felt guilty for making her waste their time. After all, you thought, she was clearly overreacting. You came down from the bedroom and yelled at her. Something like, &quot;Mom, I&#39;m not a danger to myself or others! They won&#39;t come! Stop bothering the police! You can&#39;t call the police just because somebody is sulking in their room!&quot;
+
+God. What the hell. When&#39;s the last time you thought about this? What the hell did you do? And you never talked to her afterwards, never apologized. Just buried it.
+
+&lt;&lt;updateTerror 3&gt;&gt;\
+&lt;&lt;addMemory
+  &quot;Tormenting Mom.&quot;,
+  &quot;You put your parents through so much, and you never went back and apologized. There&#39;s a part of you that doesn&#39;t want to, that still screams that you need to make them suffer. That&#39;s only part of why, though. Mostly it&#39;s because buried these memories, pushed them into your dreams, kept them out of your mind.&quot;,
+  6, 0, 100&gt;&gt;\
+&lt;&lt;include [[CST_BEDROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="CBR_YBED_3" tags="" position="1175,475" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="64" name="CBR_VBED_1" tags="" position="975,575" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="65" name="CBR_VBED_2" tags="" position="1075,575" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="66" name="CBR_DRESSER_1" tags="" position="975,675" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="67" name="CBR_DRESSER_2" tags="" position="1075,675" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="68" name="CBR_YDESK" tags="" position="975,775" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="69" name="CBR_VDESK_1" tags="" position="975,875" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="70" name="CBR_VDESK_2" tags="" position="1075,875" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&null!==n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",r="\\s"===e?"\\S":e.replace(/^\[/,"[^"),n="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",a=n.replace("\\-",""),i=function(){var e="(?:[\\x2D.0-9A-Z_a-z\\xB7\\xC0-\\xD6\\xD8-\\xF6\\xF8-\\u037D\\u037F-\\u1FFF\\u200C\\u200D\\u203F\\u2040\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD]|[\\uD800-\\uDB7F][\\uDC00-\\uDFFF])";return"[A-Za-z](?:"+e+"*-"+e+"*|[0-9A-Za-z]*)"}(),o=function(){return"("+n+"+)\\(([^\\)\\|\\n]+)\\):|"+t+"*("+n+"+)"+t+"*:([^;\\|\\n]+);|"+t+"*((?:[#.]"+n+"+"+t+"*)+);"}();return Object.freeze({space:e,spaceNoTerminator:t,lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:r,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:n,anyLetterStrict:a,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",htmlTagName:i,cssIdOrClassSigil:"[#.]",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:o,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_stringify",{value:JSON.stringify}),Object.defineProperty(JSON,"stringify",{configurable:!0,writable:!0,value:function(e,t,r){return JSON._real_stringify(e,function(e,r){var n=r;if("function"==typeof t)try{n=t(e,n)}catch(e){}return void 0===n&&(n=["(revive:eval)","undefined"]),n},r)}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),i=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),o=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a,touch:i,transitionEndEvent:o})}(),Visibility=function(){function e(){return a}function t(){return a&&document[a.stateProperty]||"visible"}function r(){return Boolean(a)}function n(){return Boolean(a&&document[a.hiddenProperty])}var a=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return undefined}();return Object.freeze(Object.defineProperties({},{vendor:{get:e},state:{get:t},isEnabled:{value:r},isHidden:{value:n},hiddenProperty:{value:a&&a.hiddenProperty},stateProperty:{value:a&&a.stateProperty},changeEvent:{value:a&&a.changeEvent}}))}(),Fullscreen=function(){function e(e){var t=e||document.documentElement;return t===document.documentElement&&("msRequestFullscreen"===f.requestFn||Browser.isOpera&&Browser.operaVersion<15)&&(t=document.body),t}function t(){return f}function r(){return(f||null)&&document[f.element]}function n(){return Boolean(f&&document[f.isEnabled])}function a(){return Boolean(f&&document[f.element])}function i(t,r){var n=this;if(!f)return Promise.reject(new Error("fullscreen not supported"));var i=e(r);if("function"!=typeof i[f.requestFn])return Promise.reject(new Error("fullscreen not supported"));if(a())return Promise.resolve();if(p())return i[f.requestFn](t);var o=".Fullscreen_requestFullscreen";return new Promise(function(e,r){jQuery(i).off(o).one(""+f.errorEvent+o+" "+f.changeEvent+o,function(t){jQuery(n).off(o),t.type===f.errorEvent?r(new Error("unknown fullscreen request error")):e()}),i[f.requestFn](t)})}function o(){var e=this;if(!f||"function"!=typeof document[f.exitFn])return Promise.reject(new TypeError("fullscreen not supported"));if(!a())return Promise.reject(new TypeError("fullscreen mode not active"));if(p())return document[f.exitFn]();var t=".Fullscreen_exitFullscreen";return new Promise(function(r,n){jQuery(document).off(t).one(""+f.errorEvent+t+" "+f.changeEvent+t,function(a){jQuery(e).off(t),a.type===f.errorEvent?n(new Error("unknown fullscreen exit error")):r()}),document[f.exitFn]()})}function s(e,t){return a()?o():i(e,t)}function u(t,r){if(f){var n=e(r);$(n).on(f.changeEvent,t)}}function l(t,r){if(f){var n=e(r);t?$(n).off(f.changeEvent,t):$(n).off(f.changeEvent)}}function c(t,r){if(f){var n=e(r);$(n).on(f.errorEvent,t)}}function d(t,r){if(f){var n=e(r);t?$(n).off(f.errorEvent,t):$(n).off(f.errorEvent)}}var f=function(){try{return Object.freeze([{isEnabled:"fullscreenEnabled",element:"fullscreenElement",requestFn:"requestFullscreen",exitFn:"exitFullscreen",changeEvent:"fullscreenchange",errorEvent:"fullscreenerror"},{isEnabled:"webkitFullscreenEnabled",element:"webkitFullscreenElement",requestFn:"webkitRequestFullscreen",exitFn:"webkitExitFullscreen",changeEvent:"webkitfullscreenchange",errorEvent:"webkitfullscreenerror"},{isEnabled:"mozFullScreenEnabled",element:"mozFullScreenElement",requestFn:"mozRequestFullScreen",exitFn:"mozCancelFullScreen",changeEvent:"mozfullscreenchange",errorEvent:"mozfullscreenerror"},{isEnabled:"msFullscreenEnabled",element:"msFullscreenElement",requestFn:"msRequestFullscreen",exitFn:"msExitFullscreen",changeEvent:"MSFullscreenChange",errorEvent:"MSFullscreenError"}].find(function(e){return e.isEnabled in document}))}catch(e){}return undefined}(),p=function(){function e(){if(null!==t)return t;if(t=!1,f)try{var e=document.exitFullscreen();e.catch(function(){}),t=e instanceof Promise}catch(e){}return t}var t=null;return e}();return Object.freeze(Object.defineProperties({},{vendor:{get:t},element:{get:r},isEnabled:{value:n},isFullscreen:{value:a},request:{value:i},exit:{value:o},toggle:{value:s},onChange:{value:u},offChange:{value:l},onError:{value:c},offError:{value:d}}))}(),_ref3=function(){function e(e){for(var t=e.cloneNode(!0),r=document.createDocumentFragment(),n=void 0;null!==(n=t.firstChild);){if(n.nodeType===Node.ELEMENT_NODE)switch(n.nodeName.toUpperCase()){case"BR":case"DIV":case"P":r.appendChild(document.createTextNode(" "))}r.appendChild(n)}return r.textContent}function t(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)return e;if(e instanceof String)return String(e);if(e instanceof Number)return Number(e);if(e instanceof Boolean)return Boolean(e)
