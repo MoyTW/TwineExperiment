@@ -230,7 +230,7 @@ postrender["Display Right Sidebar Contents"] = function (content, taskName) {
 	
 	To unstow the bar use:
 	<<removeclass "#right-ui-bar" "stowed">>
-*/</script><tw-tag name="STRANGE_PLACE" color="gray"></tw-tag><tw-passagedata pid="1" name="BETTYS_LIVING_ROOM" tags="JULIANN ROOM" position="275,1775" size="100,100">&lt;&lt;nobr&gt;&gt;
+*/</script><tw-tag name="STRANGE_PLACE" color="gray"></tw-tag><tw-passagedata pid="1" name="BETTYS_LIVING_ROOM" tags="JULIANN ROOM" position="275,1725" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Betty&#39;s Living Room&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -248,7 +248,7 @@ You don&#39;t see Betty and Lawrence much, not since you moved out. They come to
 Betty is from China, first generation. She&#39;s nice, but you never talk politics with her or Lawrence. You don&#39;t envy Juliann. Sometimes Betty tries to complain to her about crime and black people and how black people do lots of crime.
 
 You might have your own hangups about your parents, but at least they don&#39;t do that.
-&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="BETTYS_BACKYARD" tags="JULIANN ROOM" position="275,1900" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="BETTYS_BACKYARD" tags="JULIANN ROOM" position="275,1850" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Betty&#39;s Backyard&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -326,7 +326,7 @@ ROOM GRAPH
 	&lt;&lt;print &quot;[&quot; + &quot;[&quot; + Object.keys($roomGraph)[$i] + &quot;]&quot; + &quot;]&quot;&gt;&gt;
 &lt;&lt;/for&gt;&gt;\
 &lt;&lt;unset $i&gt;&gt;
-*/</tw-passagedata><tw-passagedata pid="4" name="JULIANNS_APARTMENT" tags="JULIANN ROOM" position="275,2025" size="100,100">&lt;&lt;nobr&gt;&gt;
+*/</tw-passagedata><tw-passagedata pid="4" name="JULIANNS_APARTMENT" tags="JULIANN ROOM" position="275,1975" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Juliann&#39;s Apartment&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -395,14 +395,14 @@ Sometimes you&#39;d play video games, deep in the night, when your parents were 
 This was your favorite bathroom when you were growing up (the house had three). The shower was nice and hot, there was plenty of countertop near the sink, and the mirror was huge and pristine.
 
 You spent a troubling amount of time here. It was the most comfortable room in the house. Nobody bothers you when you&#39;re in the bathroom.
-&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="ASTHMA_HOSPITAL_EMERGENCY_ROOM" tags="HOSPITAL ROOM" position="1450,500" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;include [[MIDDLE_BATHROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="ASTHMA_HOSPITAL_EMERGENCY_ROOM" tags="HOSPITAL ROOM" position="2100,450" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;St. Antony&#39;s Hospital, Emergency Room&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="9" name="ASTHMA_HOSPITAL_WARD" tags="HOSPITAL ROOM" position="1450,600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="9" name="ASTHMA_HOSPITAL_WARD" tags="HOSPITAL ROOM" position="2100,550" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;St. Antony&#39;s Hospital, Ward&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -426,14 +426,14 @@ You are standing in a bedroom you know intimately, yet have never seen. Cobwebs 
 This is not your bedroom.
 
 You feel faint, hot - feverish? A memory of a fever?
-&lt;&lt;include [[SPIDER_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="STRANGE_PLACE_ET" tags="STRANGE_PLACE ROOM" position="1575,600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;include [[SPIDER_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="STRANGE_PLACE_ET" tags="STRANGE_PLACE ROOM" position="1575,625" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Somewhere Strange&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="12" name="STRANGE_PLACE_VOLCANO" tags="STRANGE_PLACE ROOM" position="1575,700" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="12" name="STRANGE_PLACE_VOLCANO" tags="STRANGE_PLACE ROOM" position="1575,750" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Somewhere Strange&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -443,21 +443,21 @@ You feel faint, hot - feverish? A memory of a fever?
 &lt;&lt;/nobr&gt;&gt;\
 It&#39;s a hallway, but the only door is behind you. Instead, there are stairs with three-foot steps, too tall to walk.
 
-TODO: this!</tw-passagedata><tw-passagedata pid="13" name="STRANGE_PLACE_LEECHES" tags="STRANGE_PLACE ROOM" position="1575,800" size="100,100">&lt;&lt;nobr&gt;&gt;
+TODO: this!</tw-passagedata><tw-passagedata pid="13" name="STRANGE_PLACE_LEECHES" tags="STRANGE_PLACE ROOM" position="1575,875" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;Somewhere Strange&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="14" name="VEGAS_THE_STRIP" tags="VEGAS ROOM" position="1850,500" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="14" name="VEGAS_THE_STRIP" tags="VEGAS ROOM" position="2100,1250" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;The Vegas Strip&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
   &lt;&lt;/if&gt;&gt;
   &lt;&lt;set $canLeave to true&gt;&gt;
   &lt;&lt;set $canRetreat to true&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="15" name="VEGAS_THE_CASINO_FLOOR" tags="VEGAS ROOM" position="1850,600" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;\</tw-passagedata><tw-passagedata pid="15" name="VEGAS_THE_CASINO_FLOOR" tags="VEGAS ROOM" position="2100,1350" size="100,100">&lt;&lt;nobr&gt;&gt;
   &lt;&lt;if $firstEntry is true&gt;&gt;
     &lt;&lt;run setup.onRoomEntered(passage(), &quot;The Casino Floor&quot;)&gt;&gt;
     &lt;&lt;set $firstEntry to false&gt;&gt;
@@ -1263,7 +1263,7 @@ After both their children left for college your parents converted the bedroom in
 
 You&#39;re not sure if they saved your old schoolwork. Probably not.
 &lt;&lt;include [[CST_BEDROOM_BUTTONS]]&gt;&gt;
-</tw-passagedata><tw-passagedata pid="71" name="BTY_LIVING_ROOM_BUTTONS" tags="" position="275,1650" size="100,100">&lt;hr&gt;
+</tw-passagedata><tw-passagedata pid="71" name="BTY_LIVING_ROOM_BUTTONS" tags="" position="275,1600" size="100,100">&lt;hr&gt;
 &lt;&lt;if not hasVisited(&#39;B_LVR_TV_1&#39;)&gt;&gt;\
   &lt;&lt;button [[Betty&#39;s TV: Sometimes you&#39;d watch movies with Juliann.|B_LVR_TV_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;elseif not hasVisited(&#39;B_LVR_TV_2&#39;)&gt;&gt;\
@@ -1299,7 +1299,7 @@ You&#39;re not sure if they saved your old schoolwork. Probably not.
   &lt;&lt;/button&gt;&gt;
 &lt;&lt;else&gt;&gt;\
   &lt;button disabled&gt;Betty&#39;s table: That&#39;s how a lot of immigrants think.&lt;/button&gt;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="72" name="B_LVR_TV_1" tags="" position="125,1525" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Science Fiction&lt;/h2&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="72" name="B_LVR_TV_1" tags="" position="125,1475" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Science Fiction&lt;/h2&gt;\
 Her bent, not yours. You watched Lynch&#39;s &lt;em&gt;Dune&lt;/em&gt; at her place. It left an impression on you, though all you can remember now is that you made hot chocolate. Once, in college, it came up. Right at the beginning of the school year, on that first day when everybody was moving in, you met a tall boy and tiny girl and it came up, somehow. How? Who knows. Anyways, you think you got some nerd cred out of that. Totally unearned. You knew anime, not sci-fi. That isn&#39;t to say you objected to her choices, just that they were different from yours.
 
 To be honest, you mostly picked anime. &lt;em&gt;Princess Mononoke. Nausicaa. Millenium Actress.&lt;/em&gt; Mostly big names. You had a thing, and you stuck with it.
@@ -1309,7 +1309,7 @@ To be honest, you mostly picked anime. &lt;em&gt;Princess Mononoke. Nausicaa. Mi
   &quot;Movies with Juliann.&quot;,
   &quot;You watched pretty reasonable number of movies with her, but you really can&#39;t remember most of them. Funny, since you usually have a pretty good movie memory. On the other hand, it was half a lifetime ago. You&#39;re sure you&#39;d recognize them if you saw the names.&quot;,
   -1, 0, 100&gt;&gt;\
-&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="B_LVR_TV_2" tags="" position="125,1425" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Florida, 2000&lt;/h2&gt;\
+&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="B_LVR_TV_2" tags="" position="125,1375" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Florida, 2000&lt;/h2&gt;\
 You had your political tendencies set pretty early. Juliann was more agnostic, and her parents were opposite yours, staunch Republicans. You watched live on their TV, but the vibe was more sporting match than existential struggle.
 
 God. What a bizarre election. And then came 9/11, and everybody&#39;s brains broke, and the War on Terror, and, and, and.
@@ -1320,12 +1320,12 @@ God. What a bizarre election. And then came 9/11, and everybody&#39;s brains bro
   &quot;God. What a mess.&quot;,
   4, 0, 100&gt;&gt;\
 &lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;
-</tw-passagedata><tw-passagedata pid="74" name="B_LVR_TV_3" tags="" position="125,1325" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Friendly Regardless&lt;/h2&gt;\
+</tw-passagedata><tw-passagedata pid="74" name="B_LVR_TV_3" tags="" position="125,1275" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Friendly Regardless&lt;/h2&gt;\
 Your families were friends first, Chinese-American second, and Democrats or Republicans last. Politics came up, and they still do, but in the end it&#39;s only a minor point of friction.
 &lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;
-</tw-passagedata><tw-passagedata pid="75" name="B_LVR_COUCH" tags="" position="225,1525" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Cheap Classy&lt;/h2&gt;\
+</tw-passagedata><tw-passagedata pid="75" name="B_LVR_COUCH" tags="" position="225,1475" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Cheap Classy&lt;/h2&gt;\
 Betty had (has still) a lot of money, but she never spent anything she didn&#39;t need to. Respectable furniture, however, was a necessity, and the couches she bought were good quality, built to last, and pretty. She would point to them proudly. Ah, she said, I got a good deal on these! Only two hundred seventy nine dollars! And everybody would be suitably impressed.
-&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="B_LVR_BOOKSHELVES_1" tags="" position="325,1525" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Pressure Cooker&lt;/h2&gt;\
+&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="B_LVR_BOOKSHELVES_1" tags="" position="325,1475" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Pressure Cooker&lt;/h2&gt;\
 Juliann had it bad. She was smart, studious, and eager to please, but the expectations still got to her. Private schools, after-school tutoring, college prep. She went to Berkeley, in the end - extremely respectable, but surely she could have done better?
 
 Juliann&#39;s mom was always complaining. Oh, she say to the other parents, Juliann, she&#39;s so lazy, she&#39;s always gossiping instead of studying! Then Steven&#39;s mom would say something like, You should see my son! He spends so much time playing games! Your daughter plays the piano so well! and Betty would say No, no, Steven is such a good son, he listens to his parents, unlike my lazy daughter! and then Andrew&#39;s mom would chime in and...
@@ -1341,7 +1341,7 @@ She told you that it was how parents showed they were proud of their children. T
   &quot;Juliann&#39;s education.&quot;,
   &quot;Your parents eventually gave up on you and let up. Tempered their expectations. But Juliann was smart, and dutiful, and hardworking, everything a parent could ask for. So they did. Never too much more, never anything impossible. Just a little more, every time. She didn&#39;t get it as bad as some others, but she got it worse than most.&quot;,
   9, 0, 100&gt;&gt;\
-&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="B_LVR_BOOKSHELVES_2" tags="" position="325,1425" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Amy Chua&lt;/h2&gt;\
+&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="B_LVR_BOOKSHELVES_2" tags="" position="325,1375" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Amy Chua&lt;/h2&gt;\
 You remember her book stirring up a lot of controversy. It came out after you&#39;d grown up, after you&#39;d graduated college.
 
 No, that&#39;s wrong. You hadn&#39;t grown up, then. In fact, you&#39;re not sure if you&#39;ve grown up yet.
@@ -1351,7 +1351,7 @@ You were lucky. Your parents weren&#39;t tiger parents. Maybe if you put them to
 Or, maybe, if your parents were both tiger parents you&#39;d have turned out better. More likely you&#39;d have turned out worse.
 
 Don&#39;t dwell on it.
-&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="B_LVR_TABLE_1" tags="" position="425,1525" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Small Businesses&lt;/h2&gt;\
+&lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="B_LVR_TABLE_1" tags="" position="425,1475" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Small Businesses&lt;/h2&gt;\
 So much paperwork scattered about, every time you visited.
 
 She owned a computer repair shop. She knew almost nothing about computers themselves. She didn&#39;t need to; that was what the employees were for. What she knew was how to manage people and money.
@@ -1370,12 +1370,12 @@ You and Juliann almost giggled yourself to death. Mom took the twenty dollars. P
   &quot;You are not nearly Chinese enough to just slam down a twenty and storm out of your own house, but you have to admit, that&#39;s a good trick. There&#39;s nobody that wouldn&#39;t have taken that twenty after that.&quot;,
   -4, 0, 100&gt;&gt;\
 &lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;
-</tw-passagedata><tw-passagedata pid="79" name="B_LVR_TABLE_2" tags="" position="425,1425" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;First Generation&lt;/h2&gt;\
+</tw-passagedata><tw-passagedata pid="79" name="B_LVR_TABLE_2" tags="" position="425,1375" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;First Generation&lt;/h2&gt;\
 Betty and Larence&#39;s politics were solid Republican. They believed in America, the value of hard work, that everybody could make it if they tried.
 
 You can&#39;t blame them for it. Where you start and what you&#39;re comparing matters. The most ardent libertarian you ever met was a co-worker who immigrated from Russia.
 &lt;&lt;include [[BTY_LIVING_ROOM_BUTTONS]]&gt;&gt;
-</tw-passagedata><tw-passagedata pid="80" name="BTY_BACKYARD_BUTTONS" tags="" position="400,1900" size="100,100">&lt;hr&gt;
+</tw-passagedata><tw-passagedata pid="80" name="BTY_BACKYARD_BUTTONS" tags="" position="400,1850" size="100,100">&lt;hr&gt;
 &lt;&lt;if $b1Enabled&gt;&gt;\
   &lt;&lt;button [[Betty&#39;s laundry poles: Clothes drying in the sun.|BTY_YARD_LAUNDRY]]&gt;&gt;
     &lt;&lt;set $b1Enabled to false&gt;&gt;
@@ -1403,29 +1403,29 @@ You can&#39;t blame them for it. Where you start and what you&#39;re comparing m
   &lt;&lt;/button&gt;&gt;
 &lt;&lt;else&gt;&gt;\
   &lt;button disabled&gt;Betty&#39;s plum tree: Nothing lives forever.&lt;/button&gt;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="81" name="BTY_YARD_LAUNDRY" tags="" position="525,1750" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Sunny Summers&lt;/h2&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="81" name="BTY_YARD_LAUNDRY" tags="" position="525,1700" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Sunny Summers&lt;/h2&gt;\
 Your Mom liked to air-dry her laundry, too. Well, the family&#39;s laundry. She never made you or Vincent do any chores. Juliann was less fortunate, and you&#39;d help her out, if you happened to be around.
 
 It didn&#39;t rain much, and it was obvious when it would, so Betty rarely washed if she expected rain to come. On the days when she did not to dry it while it was wet outside, she&#39;d hang them up in the bathroom and run a fan. Mom did that too, but fortunately, your house had more bathrooms than Betty&#39;s, so it never interfered with your showers. Small mercies.
-&lt;&lt;include [[BTY_BACKYARD_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="B_YARD_TOMATOES" tags="" position="525,1850" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Big, Juicy&lt;/h2&gt;\
+&lt;&lt;include [[BTY_BACKYARD_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="82" name="B_YARD_TOMATOES" tags="" position="525,1800" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Big, Juicy&lt;/h2&gt;\
 Betty was very proud of her produce, and for good reason. It might be a cliche that homegrown vegetables are better than store-bought, but here it was certainly true.
 
 Huh! That&#39;s funny, actually. Her cooking tended towards traditional, and you&#39;re not sure how she actually used the tomatoes. She put out salads, sometimes, but you don&#39;t ever remember eating any tomato-based dishes at her house.
 
 She gave a lot away, to anybody who expressed any interest. Did she just grow them to give away? Or for the act of growing them? Or is your memory just too hazy?
-&lt;&lt;include [[BTY_BACKYARD_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="B_YARD_HERBS" tags="" position="525,1950" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Mixed Greens&lt;/h2&gt;\
+&lt;&lt;include [[BTY_BACKYARD_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="B_YARD_HERBS" tags="" position="525,1900" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Mixed Greens&lt;/h2&gt;\
 Mostly chives. Lots of chives. Green onions, too. What else?
 
 You&#39;re not sure. You&#39;re a city girl. Can&#39;t tell poison ivy from...other plants. The only reason you know she had chives and green onions is because she&#39;d gift them to your family every year. Also, she put them in her potstickers.
 
 That was her primary potluck dish, vegetable potstickers. Her other potluck dish was meat potstickers. It&#39;s a great potluck dish, to be honest. They keep reasonably well, they&#39;re naturally portioned, they&#39;re delicious. Good choice there Betty!
-&lt;&lt;include [[BTY_BACKYARD_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="B_YARD_PLUM_TREE" tags="" position="525,2050" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Surprise Void&lt;/h2&gt;\
+&lt;&lt;include [[BTY_BACKYARD_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="B_YARD_PLUM_TREE" tags="" position="525,2000" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Surprise Void&lt;/h2&gt;\
 Sometimes after college you came back and it was gone. It wasn&#39;t a huge part of your childhood or anything, it was just surprising. Apparently plum trees have pretty short lifespans. Who knew?
 
 She planted more herbs of various sorts in its place.
 
 One time, when you were kids, Juliann and Vincent and you gathered up a huge number of plums and pitted them, then threw them into a blender (washed, of course, but skin still intact) and insisted that your parents all try your deluxe plum juice.
-&lt;&lt;include [[BTY_BACKYARD_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="JANN_APARTMENT_BUTTONS" tags="" position="275,2150" size="100,100">&lt;hr&gt;
+&lt;&lt;include [[BTY_BACKYARD_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="JANN_APARTMENT_BUTTONS" tags="" position="275,2100" size="100,100">&lt;hr&gt;
 &lt;&lt;if not hasVisited(&#39;J_APT_TABLE_1&#39;)&gt;&gt;\
   &lt;&lt;button [[Juliann&#39;s table: You played board games here once.|J_APT_TABLE_1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;elseif $b1Enabled&gt;&gt;\
@@ -1459,7 +1459,7 @@ One time, when you were kids, Juliann and Vincent and you gathered up a huge num
   &lt;&lt;/button&gt;&gt;
 &lt;&lt;else&gt;&gt;\
   &lt;button disabled&gt;Juliann&#39;s chairs: You make do with folding chairs.&lt;/button&gt;
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="86" name="J_APT_LPT_1" tags="" position="225,2275" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Long-Distance Calls&lt;/h2&gt;\
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="86" name="J_APT_LPT_1" tags="" position="225,2225" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Long-Distance Calls&lt;/h2&gt;\
 Once, after college, you were hanging out at her apartment. After dinner, or maybe before dinner, you&#39;re not sure. Point is, you were hanging out. She had some call scheduled with somebody she&#39;d met in Chile, where she&#39;d done some NGO work, and of course she took it (the correct thing to do) and so you sat in the corner, awkwardly fiddling with your phone, while she talked to some random Chilean in Spanish. After maybe half an hour, she finished the call, and you kept on talking about whatever it was you were talking about.
 
 You can&#39;t recall what it was you were talking about. All you can recall is that feeling of resentment, for stealing Juliann&#39;s time, and the shame, for your resentment.
@@ -1471,13 +1471,13 @@ Real messed up.
   &quot;Juliann&#39;s Chile call.&quot;,
   &quot;You can&#39;t really get away from that creeping fear that Juliann doesn&#39;t really like you, that she just humors you because you&#39;ve known each other so long, that the reason it&#39;s so hard to get in touch with her is because you&#39;re just not that fun to be around.\n\nYou know it&#39;s false, but do you really? Is that just you deluding yourself? It doesn&#39;t feel false, but you&#39;ve learned not to trust how you feel.&quot;,
   7, 0, 100&gt;&gt;\
-&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="J_APT_LPT_2" tags="" position="225,2375" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;No Need&lt;/h2&gt;\
+&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="J_APT_LPT_2" tags="" position="225,2325" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;No Need&lt;/h2&gt;\
 She&#39;s social, well-adjusted, friendly. She has a huge number of friends, at least compared to you. She spends barely any time online.
 
 You once read that somebody had made a point of never eating dinner alone. You&#39;re not sure where. A self-help book? A newspaper column? Reddit? The quote stuck with you as some sort of weird impossibility. Juliann could definitely do that, though. She might have to fill in a few dinners with dates but you&#39;re pretty confident she could get there, or almost get there, just with friends.
 
 Sometimes, she&#39;ll text you in the afternoon. Hey, short notice, it&#39;d read, are you free tonight? Wanna get dinner? Always on short notice. If you don&#39;t respond within an hour or two, she&#39;ll invariably have retracted the offer.
-&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="J_APT_UTEN_1" tags="" position="325,2275" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Well Used&lt;/h2&gt;\
+&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="J_APT_UTEN_1" tags="" position="325,2225" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Well Used&lt;/h2&gt;\
 A stand mixer. A pasta attachment. Three pans. A big pot. A quick-read thermometer. A food processor. Some other stuff you can&#39;t identify.
 
 Baking is her thing, but she&#39;s also a great cook. She cooked with her mom and she was good at it.
@@ -1495,15 +1495,15 @@ You tried to learn to cook, after college, but you got frustrated and angry and 
   &quot;You can&#39;t cook.&quot;,
   &quot;Home cooking is healthier! Home cooking is cheaper! Home cooking is less wasteful, more environmentally friendly, more virtuous! Where are you going with this? What&#39;s the point of thinking about this? Who knows! All you know is that when you meet somebody and you chat and they start talking about what they had for dinner there&#39;s that shame that rushes back up and you feel sick for eating unhealthily, for the cheap takeout and microwave dinners, for being low class and unworthy and a failure of a woman, a failure of a human being, a dirty, unwashed, uncultured idiot who can&#39;t even cook her own food, like a giant baby.\n\nYou try not to think about this kind of stuff.&quot;,
   9, 0, 100&gt;&gt;\
-&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="J_APT_UTEN_2" tags="" position="325,2375" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Self Sabatage&lt;/h2&gt;\
+&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="J_APT_UTEN_2" tags="" position="325,2325" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Self Sabatage&lt;/h2&gt;\
 Used to be worse than it is now. You&#39;ve managed to get better, you think. You&#39;ve lost weight. Buy less junk.
 
 Still, it&#39;s always there. Won&#39;t ever go away. Just another part of you. Forever, right? You guess. Doomed to this misery forever.
-&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="J_APT_CHAIRS" tags="" position="425,2275" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Cheap Cheerful&lt;/h2&gt;\
+&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="J_APT_CHAIRS" tags="" position="425,2225" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Cheap Cheerful&lt;/h2&gt;\
 The chairs match the table. They&#39;re light, for easier movement. Juliann had a couch in front of the TV, but the couch only sat two, and so the chairs would shift around the apartment a lot, depending on what the last group of visitors was doing.
 
 She had parties a couple of times a week. Not big ones. The weeks where she wasn&#39;t hosting, she usually went to other peoples&#39;. Where did she find the energy?
-&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="J_APT_TABLE_1" tags="" position="125,2275" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Only Once&lt;/h2&gt;\
+&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="J_APT_TABLE_1" tags="" position="125,2225" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Only Once&lt;/h2&gt;\
 Juliann invited you. You&#39;re not sure what the occasion was, if there was any occasion. It&#39;s rare for her to invite you to things, even rare to invite you to group things, since she&#39;s always so busy. She has so many friends, and her schedule&#39;s always overbooked. When she invites you to things it usually feels like she&#39;s squeezing you in, in the few moments that she has free, and try to set anything up feels less like hanging out with a friend than scheduling a meeting.
 
 You don&#39;t remember exactly what you played. You&#39;re not a big fan of boardgames. She picked them up in college. Still, you came along. There were five people total, two other guys there who you&#39;d never met and a girl that must have been her roommate? You don&#39;t really remember any of them, this was years ago. The game had something to do with King Arthur, and somebody was a traitor.
@@ -1514,7 +1514,7 @@ You remember having fun, though you being you, you&#39;re not sure it showed. Di
   &quot;Juliann&#39;s game night.&quot;,
   &quot;Thinking about it more, you&#39;re pretty sure you know why she never invited you back.\n\nAfter the whole thing was done, she asked you what you thought of it, and your response was something like, the games have a lot of rules and are pretty complicated. Which was true! But if you say that, and you don&#39;t add that you had fun and would want to do it again, it&#39;s not unreasonable to think you didn&#39;t have fun.\n\nSmall steps, though. You&#39;ll get there eventually.&quot;,
   -6, 0, 100&gt;&gt;\
-&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="J_APT_TABLE_2" tags="" position="125,2375" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Cheap Classy&lt;/h2&gt;\
+&lt;&lt;include [[JANN_APARTMENT_BUTTONS]]&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="J_APT_TABLE_2" tags="" position="125,2325" size="100,100">&lt;h2 class=&#39;passage-header&#39;&gt;Cheap Classy&lt;/h2&gt;\
 The table was a folding table, bought for cheap, but the tablecloth she draped over it was beautiful and elegant and very intricate, white with red and gold patterns worked into it.
 
 She has a good aesthetic sense, and good spending habits too. She diverges in a lot of ways with her parents, but as far as money goes, Betty was entirely successful in her daughter&#39;s education.
