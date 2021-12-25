@@ -736,13 +736,16 @@ setup.onRoomEntered = function(passageTitle, passageTitleText) {
   State.variables.locationTitle = passageTitle;
   State.variables.locationName = passageTitleText;
   const hasVisited = State.variables.hasVisited;
+
+  hasVisited[passageTitle] = turns();
+
   if (Object.keys(hasVisited).length &gt; 5) {
     // Find the least visited &amp; purge it
     const byTurns = Object.entries(hasVisited)
-	                      .sort((a, b) =&gt; { a.value - b.value })
+	                      .sort((a, b) =&gt; { return a[1] - b[1]; })
 						  .map(e =&gt; e[0])
 						  .first();
-	
+
 	delete hasVisited[byTurns];
 
 	const roomGraph = State.variables.roomGraph;
@@ -755,8 +758,6 @@ setup.onRoomEntered = function(passageTitle, passageTitleText) {
 	})
 	delete roomGraph[byTurns];
   }
-  
-  hasVisited[passageTitle] = turns();
 }
 
 const chooseNextRoom = function(passageTitle) {
@@ -782,12 +783,11 @@ setup.onRoomExit = function(passageTitle, direction) {
   State.variables.arrivedFromDirection = setup.oppositeDirection(direction);
 
   const roomGraph = State.variables.roomGraph;
-  const knownNextRoom = roomGraph[passageTitle][direction];
-  if (knownNextRoom != undefined) {
-    Engine.play(knownNextRoom);
+  if (roomGraph[passageTitle] != undefined &amp;&amp; roomGraph[passageTitle][direction] != undefined) {
+    Engine.play(roomGraph[passageTitle][direction]);
 	return;
   }
-  
+
   const chosenNextRoom = chooseNextRoom(passageTitle);
   roomGraph[chosenNextRoom] = { north: undefined, east: undefined, south: undefined, west: undefined }
   roomGraph[passageTitle][direction] = chosenNextRoom;
