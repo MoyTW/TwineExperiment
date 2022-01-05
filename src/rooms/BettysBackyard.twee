@@ -1,0 +1,89 @@
+:: BETTYS_BACKYARD [JULIANN ROOM] {"position":"275,1850","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "Betty's Backyard")>>
+    <<set $firstEntry to false>>
+	<<set $b1Enabled to true>>
+	<<set $b2Enabled to true>>
+	<<set $b3Enabled to true>>
+	<<set $b4Enabled to true>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+Betty and Lawrence assumed that most people coming to their front door were soliciters, and they hated soliciters. So, when you were going to visit Juliann, you'd go around the side and through their backyard.
+
+It wasn't a huge, but it was large enough to house a substantial garden. Betty worked hard on it. She grew up on a farm, when she was young. One time there was a chicken wandering around (one of the neighbors a couple of blocks away kept chickens) and you and Juliann were at a loss. Betty came out, walked up behind the chicken, then darted forward and scooped it up, completely unphased by its frantic wriggling.
+
+You were both very impressed. In retrospect, it wasn't that impressive, but it was a side of Betty that neither of you had really known about.
+<<include [[BTY_BACKYARD_BUTTONS]]>>
+
+:: BTY_BACKYARD_BUTTONS {"position":"400,1850","size":"100,100"}
+<hr>
+<<if $b1Enabled>>\
+  <<button [[Betty's laundry poles: Clothes drying in the sun.|BTY_YARD_LAUNDRY]]>>
+    <<set $b1Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Betty's laundry poles: You use the drier, instead.</button>
+<</if>>\
+<<if $b2Enabled>>\
+  <<button [[Betty's tomatos: Thick and juicy.|B_YARD_TOMATOES]]>>
+    <<set $b2Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Betty's tomatoes: Better than store-bought.</button>
+<</if>>\
+<<if $b3Enabled>>\
+  <<button [[Betty's herbs: Chives, maybe?|B_YARD_HERBS]]>>
+    <<set $b3Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Betty's herbs: They take up most of the backyard.</button>
+<</if>>\
+<<if $b4Enabled>>\
+  <<button [[Betty's plum tree: It's gone, now.|B_YARD_PLUM_TREE]]>>
+    <<set $b4Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Betty's plum tree: Nothing lives forever.</button>
+<</if>>\
+
+
+:: BTY_YARD_LAUNDRY {"position":"525,1700","size":"100,100"}
+<h2 class='passage-header'>Sunny Summers</h2>\
+Your Mom liked to air-dry her laundry, too. Well, the family's laundry. She never made you or Vincent do any chores. Juliann was less fortunate, and you'd help her out, if you happened to be around.
+
+It didn't rain much, and it was obvious when it would, so Betty rarely washed if she expected rain to come. On the days when she did not to dry it while it was wet outside, she'd hang them up in the bathroom and run a fan. Mom did that too, but fortunately, your house had more bathrooms than Betty's, so it never interfered with your showers. Small mercies.
+<<include [[BTY_BACKYARD_BUTTONS]]>>
+
+
+:: B_YARD_TOMATOES {"position":"525,1800","size":"100,100"}
+<h2 class='passage-header'>Big, Juicy</h2>\
+Betty was very proud of her produce, and for good reason. It might be a cliche that homegrown vegetables are better than store-bought, but here it was certainly true.
+
+Huh! That's funny, actually. Her cooking tended towards traditional, and you're not sure how she actually used the tomatoes. She put out salads, sometimes, but you don't ever remember eating any tomato-based dishes at her house.
+
+She gave a lot away, to anybody who expressed any interest. Did she just grow them to give away? Or for the act of growing them? Or is your memory just too hazy?
+<<include [[BTY_BACKYARD_BUTTONS]]>>
+
+
+:: B_YARD_HERBS {"position":"525,1900","size":"100,100"}
+<h2 class='passage-header'>Mixed Greens</h2>\
+Mostly chives. Lots of chives. Green onions, too. What else?
+
+You're not sure. You're a city girl. Can't tell poison ivy from...other plants. The only reason you know she had chives and green onions is because she'd gift them to your family every year. Also, she put them in her potstickers.
+
+That was her primary potluck dish, vegetable potstickers. Her other potluck dish was meat potstickers. It's a great potluck dish, to be honest. They keep reasonably well, they're naturally portioned, they're delicious. Good choice there Betty!
+<<include [[BTY_BACKYARD_BUTTONS]]>>
+
+
+:: B_YARD_PLUM_TREE {"position":"525,2000","size":"100,100"}
+<h2 class='passage-header'>Surprise Void</h2>\
+Sometimes after college you came back and it was gone. It wasn't a huge part of your childhood or anything, it was just surprising. Apparently plum trees have pretty short lifespans. Who knew?
+
+She planted more herbs of various sorts in its place.
+
+One time, when you were kids, Juliann and Vincent and you gathered up a huge number of plums and pitted them, then threw them into a blender (washed, of course, but skin still intact) and insisted that your parents all try your deluxe plum juice.
+<<include [[BTY_BACKYARD_BUTTONS]]>>

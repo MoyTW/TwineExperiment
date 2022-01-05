@@ -1,0 +1,180 @@
+:: STRANGE_PLACE_ET [STRANGE_PLACE ROOM] {"position":"1575,625","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "Somewhere Strange")>>
+    <<set $firstEntry to false>>
+	<<set $SS_ET_ETScared to false>>
+	<<set $b1Enabled to true>>
+	<<set $b2Enabled to true>>
+  <</if>>
+  <<if $SS_ET_ETDiscovered is false>>
+    <<set $canLeave to false>>
+  <<else>>
+    <<set $canLeave to true>>
+  <</if>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+<<if $SS_ET_ETDiscovered is false>>\
+Night. Cold, dark, alone.
+
+<<if $SS_ET_firstVisit is true>>\
+  A car roars by, headlights cutting through the night, revealing tall trees and worn asphalt. Then it's gone, and you're left alone with the stars and moon. You can't even see your hands. Is this what it's like go camping? How do people even walk? You can't even see your feet! Navigating by the moon is bullshit, who the fuck wrote those stories? Panic starts to set in. You can't see, you don't know where you are, if you get lost in the woods nobody will ever find your body, maybe, just maybe you could turn back but -
+
+  No, wait. You fish about in your pocket and pull out your phone. Right. You pull up your flashlight app and cast it about, revealing a 4-way intersection.
+<<else>>\
+  You pull out your phone, turn on the flashlight app. A 4-way intersection, no stop signs, tall trees all around.
+<</if>>\
+
+In front of you, a bush rustles. The beam does little to illuminate it. Again it rustles, and a low, unearthly moaning reaches your eyes. You catch a glimpse of dry wrinkled flesh, shuffling erratically behind the bush.
+<<if $SS_ET_firstVisit is true>>\
+  
+  <<set $SS_ET_firstVisit to false>>\
+  Maybe it would be best to go back.
+<</if>>\
+<<else>>\
+Night. Cold and dark, but not alone.
+
+You pull out your phone, turn on the flashlight app. A 4-way intersection, no stop signs, tall trees all around, and in the center of the intersection stands ET, from Steven Spielberg's famous movie, E.T. the Extra-terrestrial, a movie which you have never watched.
+
+Come to think of it, there are probably a lot of kids nowadays who've never even heard of ET. That's how it goes, huh?
+<</if>>\
+<<include [[ET_BUTTONS]]>>
+
+:: ET_BUTTONS {"position":"1700,625","size":"100,100"}
+<hr>
+<<if $SS_ET_ETScared>>\
+<<elseif $SS_ET_ETDiscovered is false>>\
+  <<button [[The bushes: Investigate the creature.|ET_INVESTIGATE]]>>
+    <<set $SS_ET_ETDiscovered to true>>
+	<<set $canLeave to true>>
+  <</button>>
+<<elseif $b1Enabled>>\
+  <<button [['ET: Chat with ET.'|ET_PLAY_2]]>>
+    <<set $b1Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>ET: He waits dutifully by the side of the road.</button>
+<</if>>\
+<<if $SS_ET_ETDiscovered is true>>\
+<<elseif not hasVisited('ET_BYPASS_1')>>\
+  <<button [['The bushes: Bypass them and keep going.'|ET_BYPASS_1]]>>  <</button>>
+<<elseif not hasVisited('ET_BYPASS_2')>>\
+  <<button [['The bushes: Steel yourself and dash past.'|ET_BYPASS_2]]>> 
+    <<set $SS_ET_ETScared to true>>
+	<<set $canLeave to true>>
+  <</button>>
+<<elseif hasVisited('ET_BYPASS_2') and not $SS_ET_ETScared and $b2Enabled is true>>\
+  <<button [['The bushes: Yell and drive the lurker off.'|ET_BYPASS_3]]>>
+    <<set $b2Enabled to false>>
+  <</button>>
+<<elseif $SS_ET_ETScared>>\
+  <button disabled>The bushes: The lurker is gone, for now.</button>
+<<else>>\
+  <button disabled>The bushes: The lurker refuses to be driven off again.</button>
+<</if>>
+
+
+:: ET_INVESTIGATE {"position":"1825,550","size":"100,100"}
+<<set $canLeave to false>>\
+<<set $canRetreat to false>>\
+<h2 class='passage-header'>Flashlight Forward</h2>\
+Slowly, step by step, you approach, ready at any moment to spring away. Whatever lies in hiding is similarly cautious, betraying itself only by the occasional twitch. You're maybe eight feet away when you swallow and speak. Hello?
+
+The voice is scratchy, low. Hell. Oh.
+
+Hello? You swallow.
+
+Hell. Oh.
+
+Wh-what's your name?
+
+E. T.
+
+Wait. Wait. What? You're...ET?
+
+E. T.
+
+Fucking <em>what?</em> Holy shit, now you remember, you were terrified of ET when you were a kid, you actually ran screaming from the room when your uncle was playing it at his house. Your breath escapes from you despite your best efforts, spilling out in relieved laughter. You try to suppress it but the effort is futile, especially when ET parts the bushes and you see his wrinkly alien face peering out from the side of the road. When you finally manage to get control of yourself you kneel down and hold out your hand.
+
+Aww, sorry little guy, you say, I didn't mean to scare you.
+
+After a moment of hesitation, ET shuffles out onto the road with his stiff, shuffling gait.
+
+<<updateTerror -4>>\
+<hr>
+<<button [[What're you doing out here, little guy?|ET_PLAY_1]]>><</button>>
+
+
+:: ET_BYPASS_1 {"position":"1825,675","size":"100,100"}
+<h2 class='passage-header'>Slowly, Carefully</h2>\
+You walk to the other side of the road from the bushes, carefully keeping your light on them. Whoever or whatever lurks in the bush is silent, so you start to creep down the road, but suddenly a moaning sets up and a shiveled hand with an inhumanly long finger emerges from the bush - you jump backwards - trip - back hits the road - a sharp pain in the back of your head - asphalt under your hands - blood? You're bleeding. You swallow. Fuck. Fuck! Have you split your head open? The back of your head is wet, but it doesn't seem like it's - shit, it's your hand, how did you? You look around, realize that you're back where you started.
+
+Your hand. You transfer the light, examine the wound. The gash is nasty and ragged. Somehow, it's not very painful. Throbbing, more. It knits itself together, expelling little flecks of rock and dirt, but it leaves a nasty scar.
+
+Right. This is a dream. You can't die in a dream. Whatever happens...you can't die. You hold onto that thought.
+
+<<updateTerror 11>>\
+<<include [[ET_BUTTONS]]>>
+
+
+:: ET_BYPASS_2 {"position":"1925,675","size":"100,100"}
+<h2 class='passage-header'>Swiftly, Recklessly</h2>\
+You breathe in, out, in, out, jump in place for a bit. Get ready. Have to be fast. Have to be loud. Angry. Fuck you, fucking creepy bush nightmare stalker. Fuck you! Fuck yoooou! you scream, and start running, Fuuuuuck yooooou! The creature retreats as you barrel down the road, dashing away down the shoulder, and you scream and run and scream and run until you look back and see the bushes sitting still, hear silence.
+
+You may have meant to run by, but it looks like you've driven it off, at least for now. You laugh in triumph.
+
+<<updateTerror -6>>\
+<<include [[ET_BUTTONS]]>>
+
+
+:: ET_BYPASS_3 {"position":"2025,675","size":"100,100"}
+<h2 class='passage-header'>Get Mad!</h2>\
+You breathe in and summon up as much rage as you can. Dad, for his callous affect. Mom, for her constant shaming. You, for your ungratefulness, for all the time you wasted, for your ugly fat face and your lack of control and your bad eating and compulsive binge watching and game playing and failure and -
+
+You open your mouth and scream, keep screaming, scream as much invective as you can, you wish you could be more creative but it's mostly screaming fuck you over and over again, variations, fuck you you're so stupid, fuck you you're so ugly, fuck you you're so lazy -
+
+and whatever's in the bushes is keening, louder, louder still, starting and stopping just like you are, piercing you screams and driving you back, hands over ears, and you stumble backwards, stop, sit in silence.
+
+<<updateTerror 9>>\
+<<include [[ET_BUTTONS]]>>
+
+
+:: ET_PLAY_1 {"position":"1925,550","size":"100,100"}
+<<set $canLeave to true>>\
+<<set $canRetreat to true>>\
+<h2 class='passage-header'>Waiting Here</h2>\
+What're you waiting for?
+
+Friends.
+
+You grin. Hey ET, you ask. You need a phone?
+
+Phone? He tilts his head back and forth.
+
+Phone, yeah. To phone home?
+
+Home phone, he says. E.T. waiting for friends.
+
+Right, you say, holding your phone out. Will this do?
+
+Friends know.
+
+So...you mean, you phoned home already?
+
+ET nods.
+
+Huh! Would you look at that. Looks like things are going pretty okay for dream-ET.
+
+<<updateTerror -3>>\
+<<include [[ET_BUTTONS]]>>
+
+
+:: ET_PLAY_2 {"position":"2025,550","size":"100,100"}
+<h2 class='passage-header'>Chatted Out</h2>\
+At some point, it becomes obvious that ET is mostly humoring you. You laugh, and leave him be.
+
+You know, you never actually watched ET. You ran screaming out of the room and then in all the years since haven't had the urge to revisit it. You're not even sure he says phone home, or if he talks like how you're thinking he talks.
+
+Just never had reason to see it, you suppose.
+<<include [[ET_BUTTONS]]>>

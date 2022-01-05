@@ -1,0 +1,130 @@
+:: STRANGE_PLACE_SPIDERS [STRANGE_PLACE ROOM] {"position":"1450,500","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "Somewhere Strange")>>
+    <<set $firstEntry to false>>
+	<<set $b1Enabled to true>>
+	<<set $b2Enabled to true>>
+	<<set $b3Enabled to true>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+A bedroom you know intimately, yet have never seen. Cobwebs in corners, dusty duvets, and peeling paint all speak of long abandonment. In the center of the room is a bed. Your bed, from long ago.
+
+This is not your bedroom.
+
+You feel faint, hot - feverish? A memory of a fever?
+<<include [[SPIDER_BUTTONS]]>>
+
+
+:: SPIDER_BED {"position":"1500,375","size":"100,100"}
+<<set $canLeave to false>>\
+<<set $canRetreat to false>>\
+<h2 class='passage-header'>Fever Fatigue</h2>\
+You're burning up, dizzy. You try to examine the bed. Your head spins and you collapse, raising a cloud of dust.
+
+You're six years old, and sick. You can't sleep. You can't stop sweating. You're too tired to sit up. Mom comes in and fusses and leaves and comes in and fusses and leaves. You close your eyes, but you get even dizzier, so you open them until your head hurts, but when you close them you get dizzier so you open them again.
+
+The light buzzes against your brain. Too bright, by far.
+
+<<updateTerror 1>>\
+<hr>
+<<button [['Keep your eyes open.'|SPIDER_EYES_OPEN]]>><</button>>
+<<button [['Close your eyes.'|SPIDER_EYES_CLOSED]]>><</button>>
+
+
+:: SPIDER_CORNERS {"position":"1600,375","size":"100,100"}
+<h2 class='passage-header'>Checking Corners</h2>\
+Cobwebs. Thick, heavy. No, you'd rather not. What about the walls?
+
+White. Normal. Some kind of stucco? Just like the walls in the California second house. Fragile, then enough to punch through. You don't even need to be that angry.
+<<include [[SPIDER_BUTTONS]]>>
+
+
+:: SPIDER_BUTTONS {"position":"1575,500","size":"100,100"}
+<hr>
+<<if $b1Enabled>>\
+  <<button [[The bed: Check it out.|SPIDER_BED]]>>
+    <<set $b1Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>The bed: Best stay far away.</button>
+<</if>>\
+<<if $b2Enabled>>\
+  <<button [[The walls: Examine the corners.|SPIDER_CORNERS]]>>
+    <<set $b2Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>The walls: Nothing of interest here.</button>
+<</if>>
+
+:: SPIDER_EYES_OPEN {"position":"1450,250","size":"100,100"}
+<<set $canLeave to false>>\
+<h2 class='passage-header'>Burning Bright</h2>\
+You're not staring at the light, of course. That would be silly. You watch the corners, the sides of the ceiling.
+
+There's something there, moving. A shadow. Small. You squint, and it grows, legs elongating, eight spindly black legs, blurry through sweat. Eight long legs supporting a black thorax and giant abdomen, a shadow on the wall.
+
+It grows, grows, grows, and its long, long legs span the ceiling and reach down the walls towards your bed.
+
+<<updateTerror 4>>\
+<hr>
+<<button [['Close your eyes, and keep them shut!'|SPIDER_EYES_SHUT]]>><</button>>
+<<button [['Scream for help!'|SPIDER_SCREAM]]>><</button>>
+<<button [['Get up and run!'|SPIDER_RUN]]>><</button>>
+
+
+:: SPIDER_EYES_CLOSED {"position":"1550,250","size":"100,100"}
+<<set $canLeave to false>>\
+<h2 class='passage-header'>Spiraling Down</h2>\
+The light's gone, but now you feel like you're spinning, first slowly, then quickly, and then you're spinning and falling into the bed and -
+
+You open your eyes, groaning, and stare at the corner of the room, but the light is relentless in its assault. Even in the corner of your eyes, it is too bright, too harsh. You settle for closing them halfway.
+
+Out from the corner crawls a shadow. You barely notice it at first. Then it crawls onto the ceiling. Eight spindly black legs, blurry through sweat, but as you watch it grows, grows, grows, and its long, long legs span the ceiling and reach down the walls towards your bed.
+
+<<updateTerror 4>>\
+<hr>
+<<button [['Close your eyes, and keep them shut!'|SPIDER_EYES_SHUT]]>><</button>>
+<<button [['Scream for help!'|SPIDER_SCREAM]]>><</button>>
+<<button [['Get up and run!'|SPIDER_RUN]]>><</button>>
+
+
+:: SPIDER_EYES_SHUT {"position":"1500,125","size":"100,100"}
+<h2 class='passage-header'>Glued Shut</h2>\
+The world revolves, and it's worse now, and you're spinning, hands gripping the sheets, but you've somehow become disconnected from the bed and the bed's flapping off into space, but you can't open your eyes, you can't! and bile rises in your throat and - eyes open, and those long, long legs wrap themselves around your bed; you gurgle in terror; clicking mandibles descend from the ceiling -
+
+<<updateTerror 5>>\
+<hr>
+<<button [["That's where the memory stops."|SPIDER_END]]>><</button>>
+
+
+:: SPIDER_SCREAM {"position":"1600,125","size":"100,100"}
+<h2 class='passage-header'>Silent Screams</h2>\
+Your body does not listen to you, and all that emerges is a weak mewling. You close your eyes, but the world spins, you feel your stomach coming up; you open your eyes, and those long, long legs wrap themselves around your bed; you close your eyes, grit your teeth, fall, moan, trash; you open your eyes and clicking mandibles descend from the ceiling -
+
+<<updateTerror 5>>\
+<hr>
+<<button [["That's where the memory stops."|SPIDER_END]]>><</button>>
+
+
+:: SPIDER_RUN {"position":"1400,125","size":"100,100"}
+<h2 class='passage-header'>Feverish, Bedridden</h2>\
+You try to throw off the sheets, but you succeed only in tangling yourself. You try to roll off the side, but your body is small and your Mom made the bed too tightly. Now those long, long legs wrap themselves around your bed, and your furious scream emerges as a bloated gurgle. Clicking mandibles descend from the ceiling -
+
+<<updateTerror 5>>\
+<hr>
+<<button [["That's where the memory stops."|SPIDER_END]]>><</button>>
+
+
+:: SPIDER_END {"position":"1500,0","size":"100,100"}
+<h2 class='passage-header'>Common Knowledge</h2>\
+Nobody ever asked you why you were scared of spiders. Why would they? Girls are scared of spiders. Everybody knows that.
+
+Who knows. Maybe that's just how it is. Maybe you'd just have ended up scared of spiders anyways. If you did, hopefully it would be in a less traumatic fashion.
+
+You had a roommate who would trap them in a cup and dump them outside. First you thought she was brave, but then you realized that it's only brave if you're afraid.
+<hr>
+<<button [["Silly, isn't it?"|STRANGE_PLACE_SPIDERS]]>><</button>>

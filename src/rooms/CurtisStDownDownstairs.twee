@@ -1,0 +1,322 @@
+:: CURTIS_ST_DOWN_DOWNSTAIRS [CURTIS_ST ROOM] {"position":"600,425","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "Down Downstairs at Curtis St.")>>
+    <<set $firstEntry to false>>
+	<<set $b1Enabled to true>>
+	<<set $b2Enabled to true>>
+	<<set $b3Enabled to true>>
+	<<set $b4Enabled to true>>
+	<<set $b5Enabled to true>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+This was the TV room, with the one TV in the house, where Mom watched her Chinese action movies and Dad watched his basketball games. You and your brother played video games and watched anime.
+
+For a while you slept the on couches instead of your bed, by your own choice. You don't remember why. You mostly remember rage, mixed with depression. Maybe depression, mixed with rage. Who knows?
+
+Sometimes you'd play video games, deep in the night, when your parents were asleep and couldn't chastise you. You thought they didn't know. Of course they knew. They were just tired of fighting with you.
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+:: DOWN_DOWNSTAIRS_BUTTONS {"position":"725,425","size":"100,100"}
+<hr>
+<<if not hasVisited('DDS_BIG_TV_1')>>\
+  <<button [["The TV: It's just how you remember it."|DDS_BIG_TV_1]]>><</button>>
+<<elseif $b1Enabled>>\
+  <<button [['The TV: Will it turn on?'|DDS_BIG_TV_2]]>>
+    <<set $b1Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>The TV: There's nothing on right now.</button>
+<</if>>\
+<<if not hasVisited('DDS_COUCH_1')>>\
+  <<button [[The couch: When did you start sleeping here?|DDS_COUCH_1]]>><</button>>
+<<elseif not hasVisited('DDS_COUCH_2')>>\
+  <<button [[The couch: You slept on the couch after college, too.|DDS_COUCH_2]]>><</button>>
+<<elseif $b2Enabled>>\
+  <<button [[The couch: Don't dwell on it.|DDS_COUCH_3]]>>
+    <<set $b2Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>The couch: Leave it alone.</button>
+<</if>>\
+<<if not hasVisited('DDS_PS2_1')>>\
+  <<button [[The Playstation 2: How nostalgic.|DDS_PS2_1]]>><</button>>
+<<elseif not hasVisited('DDS_PS2_2')>>\
+  <<button [[The Playstation 2: Did they keep all the wires and controllers?|DDS_PS2_2]]>><</button>>
+<<elseif not hasVisited('DDS_PS2_3')>>\
+  <<button [['The Playstation 2: Start it up.'|DDS_PS2_3]]>><</button>>
+<<elseif $b3Enabled>>\
+  <<button [['The Playstation 2: Maybe you can fiddle with it?'|DDS_PS2_4]]>>
+    <<set $b3Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>The Playstation 2: No games for you.</button>
+<</if>>\
+<<if not hasVisited('DDS_GC_1')>>\
+  <<button [[The Gamecube: Vincent loved this thing.|DDS_GC_1]]>><</button>>
+<<elseif not hasVisited('DDS_GC_2')>>\
+  <<button [[The Gamecube: Does it still work?|DDS_GC_2]]>><</button>>
+<<elseif $b4Enabled>>\
+  <<button [['The Gamecube: What else do you remember?'|DDS_GC_3]]>>
+    <<set $b4Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>The Gamecube: You have fond memories of it.</button>
+<</if>>\
+<<if not hasVisited('DDS_ANIME_1')>>\
+  <<button [['The anime shelf: You can barely remember what you bought.'|DDS_ANIME_1]]>><</button>>
+<<elseif not hasVisited('DDS_ANIME_2')>>\
+  <<button [['The anime shelf: It could be tidier.'|DDS_ANIME_2]]>><</button>>
+<<elseif $b5Enabled>>\
+  <<button [['The anime shelf: You spent so much time on it.'|DDS_ANIME_3]]>>
+    <<set $b5Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>The anime shelf: The you who did something else would be a different you.</button>
+<</if>>\
+
+
+:: DDS_BIG_TV_2 {"position":"525,200","size":"100,100"}
+<h2 class='passage-header'>Dead Channel</h2>\
+Unfortunate. It looks like dreams don't get cable.
+
+Oh well. It'd probably be playing Judge Judy or a True Crime show anyways. Mom watched so much Judge Judy. Still does.
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_COUCH_1 {"position":"625,300","size":"100,100"}
+<h2 class='passage-header'>Middle School</h2>\
+The third year. First it was intermittent. Then you did it more, and at some point you simply abandoned your bed, migrating your blankets permanently into the down-downstairs. When you parents asked you what you were doing, you yelled at them. When they asked you why they were doing it, you yelled at them some more.
+
+You don't remember what you yelled. You only remember what you felt when you yelled it.
+
+For several years, before he became so infirm he had to go to an assisted living facility, Grandpa was living in the house with you. The guest bedroom is behind the TV room, and he'd often retire when he saw you getting ready for bed. You felt a sort of shame and anger every time he walked into his room, not at him, but at yourself, for failing so badly at being normal that you couldn't even sleep in your own bed.
+
+God. What were you thinking? Surely there was some rationale. Yet all you can recall is rage and resentment and a creeping terror that you thought you'd left behind.
+
+Forget about it, all right? You were depressed. You can't logic your way through depression.
+
+<<updateTerror 1>>\
+<<addMemory
+  "Middle school misery.",
+  "Your parents didn't mind that you slept on the couch, but it hurt them when you yelled at them about it. You never apologized. Of course you know you should!\n\nYou know you won't.",
+  6, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_COUCH_2 {"position":"625,200","size":"100,100"}
+<h2 class='passage-header'>No Job</h2>\
+You never learned how to find one. They didn't teach you that in college. You got a few interviews, but they went poorly.
+
+You can't blame the interviewers. At best, you were low in self-confidence. At worst, you were neurotic and self-flagellating. You wouldn't have hired yourself either.
+
+God! You could have at least hidden it for a few hours. No. No, you really couldn't.
+
+So you stewed and rotted and that feeling of failure grew from a seed to a wonderful garden, and the more you felt it the worse you did. The longer you took to find a job, the worse it looked to employers. Eventually, they started asking it about. Eventually, you gave up, resigned yourself to an eternity of wasted days and shameful nights, a shadow in the corners of your parents' house.
+
+You got your first job through nepotism, actually. One of Dad's friends. It worked. Your Dad may have given you hopelessly outdated advice in the job hunt, but he was right about one thing. Once you have a job, it's a lot easier to get the next one. You've had three, now, and every time you change jobs it almost breaks you.
+
+Some of your friends have quit their jobs without another one lined up. You would never do that. That creeping shame is always there, lurking, waiting, ready to strike.
+
+<<updateTerror 3>>\
+<<addMemory
+  "Jobless after college.",
+  "One of you coworkers asked why you put up with so much shit at work, when you could definitely get a better, less abusive job. You laughed. You tried to play it off.\n\nThat evening you opened Indeed and got as far as a single job search before an immense headache broke out. You slept badly that night. You haven't tried since.",
+  11, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_BIG_TV_1 {"position":"525,300","size":"100,100"}
+<h2 class='passage-header'>Unreasonably Large</h2>\
+Very modern. No DVD player. No VCR player.
+
+Come on. Nobody uses VCR players anymore. When was the last time you used a VCR? Cesario, in college?
+
+Cesario. You haven't though of him in forever. In hindsight he was obviously trying to date you, but at the time you literally could not conceive of the possibility.
+
+You went to the Palace of Legion of honor together on a weekend. You met his parents. You brought him back to your house. You were a little spiteful about it. Look, Mom! Look, Dad! I <em>can</em> make friends! What in the world. What were you doing.
+
+When he was staying over the two of went rented a movie together. <em>Perfect Blue.</em> It was a weird choice for a date, but you were a weird kid, and you didn't think it was a date. In your defense, he was also into anime.
+
+Eventually, he gave up. You don't know what happened to him. You feel sorry for him, now. I'm sorry, Cesario! It wasn't you, it was my crippling lack of self-esteem!
+
+Years later, something clicked, and you suddenly realized what had happened. When that happened, you had felt almost transcendetly happy. Suddenly, you believed yourself worthy of love.
+
+What a strange person you are.
+
+<<updateTerror -10>>\
+<<addMemory
+  "A movie with Cesario.",
+  "Honestly? You were probably cranky and angry the whole time. Cesario, you deserved better.",
+  -7, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_COUCH_3 {"position":"625,100","size":"100,100"}
+<h2 class='passage-header'>Just Misery?</h2>\
+No. There were some good times here. It's the same couch you used to watch anime with Vincent, and play games after school. It's not all bad.
+
+But it's best to leave it there.
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_PS2_1 {"position":"725,300","size":"100,100"}
+<h2 class='passage-header'>Playing Together</h2>\
+For a most of elementary school and the early years of middle school you'd come home and play games with Vincent, before he started making his own friends. Most of the games you played by taking turns. You had a promise that neither of you would play through any of the stories without the other. Grinding was fine, random exploration was fine, but for any story content you had to have your sibling. If your sibling wasn't there, you played something else.
+
+Sometimes you'd play competitive games. He loved Armored Core. He beat you all the time, despite the fact that you were three years older. He learned faster. He reacted faster. And he practiced.
+
+He was a lot better than you at video games. In a lot of other ways, too. You wish you saw him more.
+
+<<updateTerror -5>>\
+<<addMemory
+  "Gaming with Vincent.",
+  "You played together almost every day, for years. One of your fondest childhood memories.",
+  -15, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_PS2_2 {"position":"725,200","size":"100,100"}
+<h2 class='passage-header'>Playing Alone</h2>\
+The cables are in the cabinet, under the TV, where your parents shoved all your consoles when Vincent left for college. You hook up the power and the controllers.
+
+One night in middle school you decided, in what you can only describe as an extended tantrum, to stay up all night playing Final Fantasy X. You don't quite remember what motivated this. Spite towards your parents? Burning resentment at the fact that you'd have to go to school the next morning? Desperate escapism? Who knows.
+
+You turned the sound off, so your parents wouldn't wake up, and played straight until dawn. You don't remember what happened on the next day, but it can't have been pleasant, for you or anybody around you.
+
+You were obsessed with Final Fantasy X. It feels nostalgic and safe and inspirational all at once, even when you think about it now. Maybe that's why such an obviously miserable memory feels nostalgic to you.
+
+Or maybe you're more like your middle school self than you like to think.
+
+<<updateTerror -1>>\
+<<addMemory
+  "Final Fantasy X.",
+  "You were obsessed with Yuna, in a way that feels a mortifying to remember. You wanted to be like her <em>so badly.</em>\n\nA couple of years out of college, you were chatting with one of your co-workers about video games. Somehow, Final Fantasy X came up. He made an offhand remark, something about Yuna having a death wish, and you laughed, but...honestly? It fits. You were pretty suicidal back then.",
+  -7, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_PS2_3 {"position":"725,100","size":"100,100"}
+<h2 class='passage-header'>Never Finished</h2>\
+It starts, but for some reason it can't detect the disk. You open the disk tray. Interesting. It's <em>The Legend of Dragoon,</em> the only game the two of you never finished.
+
+It was a JRPG, so it was very long. It had four disks. Vincent and you (but mostly Vincent) got maybe two-thirds through the game, but there was a particular boss fight with some floating girl that froze up.
+
+Vincent restarted the game and played back up to the fight, and it froze again.
+
+Eventually you reasoned that the disk must be broken. So, that was the only game the two of you bought for the Playstation 2 that you didn't finish. You suppose when you're a kid with more time than income, you'll finish anything you can get your hands on.
+
+<<updateTerror -2>>\
+<<addMemory
+  "The Legend of Dragoon.",
+  "After you'd gone off to college, Vincent hunted down another copy and ended up beating it. You play games, still, quite a lot of them, but you hardly ever finish them. Vincent still finishes almost everything he plays, though he's pretty selective with what he starts.",
+  -2, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_PS2_4 {"position":"725,0","size":"100,100"}
+<h2 class='passage-header'>Broken Reader</h2>\
+You try turning it off and on again. You cycle through a few of the old games that are still stacked in the back of the cabinet. You thump it a couple of times, on the logic that this is a dream and so maybe all those jokes about percussive maintenance will work.
+
+Nope. The Playstation 2 remains broken. Oh well.
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_GC_1 {"position":"825,300","size":"100,100"}
+<h2 class='passage-header'>Smash Bros</h2>\
+Vincent was insanely good at Smash. You couldn't hold a candle to him. He watched Smash videos, he practiced, he apparently played it a lot with his friends. He explained wavedashing to you a few times, but you kept forgetting. He was such a saintly little brother.
+
+In college he played in some Smash tournaments. At some point he even played in some of the big tournaments - you weren't up to date with the competitive scene, but it existed, and he played in a couple of them. He never won, but that was still leagues ahead of anybody else you knew.
+
+Sometimes you'd just sit on the couch and watch him practice.
+
+<<updateTerror -4>>\
+<<addMemory
+  "Watching Vincent practice.",
+  "Those were good times.\n\nHe made a bunch of friends in college through gaming. They were roommates. They still keep in touch, still play games together online. You haven't spoken to anybody from college since you graduated.\n\nVincent was always much more social than you.",
+  -8, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_GC_2 {"position":"825,200","size":"100,100"}
+<h2 class='passage-header'>Animal Crossing</h2>\
+You laugh when you see what game your dream decided to give you. Of all games, <em>Animal Crossing?</em>
+
+You played it some, but it started to stress you out, after a while. The gyroids were a little creepy, but that wasn't it. It was the way the clock ticked on, inevitably. One time you didn't play for a couple of weeks - not sure why, maybe your parents had shipped you off to summer camp or dragged you on a vacation - and when you logged back in, the game called you out for ignoring it.
+
+That's your main memory of the game. Shame, at failing the fictional characters, and anger, because that was a cheap trick, game, what the fuck are you doing, and then that anger turned inwards and you berated yourself for falling for such a cheap trick. You took the disk and hid it at the back of the cabinet.
+
+When Vincent asked you where the disk was you lied. Said you didn't know. He searched for a while then shrugged. You're not sure if he believed you, but if he didn't he never called you on it.
+
+That seems like it should be a grim memory, but you can't help but laugh at how fickle and tempestuous your young self was.
+
+<<updateTerror -1>>\
+<<addMemory
+  "'Losing' Animal Crossing.",
+  "To be fair to your younger self, it is absolutely emotionally manipulative to have the characters in a game guilt trip the player for not playing. Your anger wasn't wrong, just...comically overdone. Mountains and molehills and all that.",
+  -1, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_GC_3 {"position":"825,100","size":"100,100"}
+<h2 class='passage-header'>Not Much</h2>\
+You played some <em>Metroid</em>, but only the first one. Vincent played all the other ones. Both of you played <em>Wind Waker.</em>
+
+Oh! There was <em>Star Fox.</em> What was the full name? <em>Star Fox: Adventures?</em> No. Adventures had Krystal, that was something else. <em>Star Fox: Assault?</em> You liked that one, because you could play multiplayer, and Vincent wasn't as good at it as he was at Smash, so you could stand a chance. That was probably the game you played the most.
+
+But that's pretty much it.
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_ANIME_1 {"position":"925,300","size":"100,100"}
+<h2 class='passage-header'>Too Messy!</h2>\
+All the titles are disorganized, cases from one series mixed semi-randomly, some cases vertical, others horizontal. And there's manga mixed in, with no discernable pattern.
+
+You don't know if you'd call them classics. That implies a level of distinction and cultural acknowledgement that the <em>X</em> TV series might not have achieved, despite its very pretty cast. <em>Cardcaptor Sakura</em> has a better chance. You were a pretty big CLAMP fan (and still are) - an all-woman circle? Cool then, cool now. You even hunted down English copies of <em>RG Veda,</em> which was extemely pretty despite being their first work. There's <em>Evangelion</em> there, and if that isn't classic you don't know what is. Ah! Here's that set of bootleg <em>Zeta Gundam</em> DVDs that you bought off the internet on the casual mention of classmates (you weren't even friends), subtitled by some enterprising souls with an uncertain grasp on either Japanese, English, or both.
+
+Really, should have hunted down some fansubs on that one.
+
+This section seems to be all manga. <em>Fruits Basket, X/1999, Bleach, Copernicus' Breath, A Bride's Story</em> - hang on. You stored your manga in the upstairs shelves. And <em>Copernicus' Breath</em> is...not something that ever got an English publication. Furthermore, <em>Copernicus' Breath</em> <em>A Bride's Story</em> are outside of the timeframe, and you never owned physical copies of either.
+
+Come on! Whoever's putting this dream together has a lot to answer for!
+
+<<addMemory
+  "Zeta Gundam? Seriously?",
+  "You're not even a Gundam fan! You bought it because a few of the people at the first (and only) High School anime club meeting were talking about it and you were so socially inept that such a simple, offhand conversation translated to an iron blanket of peer pressure.\n\nThen the club just never met again.\n\nOnce you had it, though, you watched it. The whole thing. Sunk cost fallacy, maybe. You suspected that there were at least three people working on the translation, because there were three sets of name spellings and language quirks.\n\nYou never brought it up to anybody. You worried they'd think you were weird for doing that.",
+  -1, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_ANIME_2 {"position":"925,200","size":"100,100"}
+<h2 class='passage-header'>Slow Going</h2>\
+Every time you right a diagonal case, or order a series, you look back and find something new in the empty space.
+
+Now there are <em>Pokemon</em> DVDs (which you never owned; you watched it on TV with your brother), <em>Baccano!</em> DVDs (which aired long after you'd left home), <em>Naruto...</em>
+
+God. You watched <em>Naruto.</em> Why did you start watching that, anyways? Because it was the thing to watch? Then once you'd started...I mean, you ended up liking it. So it's all good, right?
+
+You joined an online roleplaying forum for Naruto. God, you haven't thought about that for so long. You were really into it, too. Crazy into it. It went all through high school. You didn't eat lunch with the other kids. Instead, you'd walk home and make a frozen dinner and watch an episode of whatever show you were watching, mostly <em>Naruto,</em> and then walk back to school. The benefits of an open lunch school, you guess.
+
+God! You want to go back in time and grab past-you and shake her and yell, "EAT LUNCH WITH OTHER PEOPLE, KID! And while you're at it, make some female friends! And be nicer to your parents! Also you're clinically depressed, go get a diagnosis! And sleep more! Try out rock climbing, you'll like it in the future!"
+
+Of course past-you would probably just bite you and scurry away. Also, grabbing somebody and shaking them while yelling is assault. Also, yelling random advice at people rarely helps anything.
+
+It's a funny mental image, at least.
+
+<<updateTerror -1>>\
+<<addMemory
+  "High school lunches.",
+  "There were at least a few times when you ate lunch with other people. Sometimes you did homework with other kids, mostly in the AP classes. One time, some of the nerds in your AP Statistics class started a D&D game, and they invited you. You turned them down. You had thought that they were only inviting you because you were a girl.\n\nYou were a real vicious little kid. You can't really muster any rancor for your past self. How could she have known better?",
+  -1, 0, 100>>\
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>
+
+
+:: DDS_ANIME_3 {"position":"925,100","size":"100,100"}
+<h2 class='passage-header'>Sparking Joy?</h2>\
+Maybe it did; maybe it didn't. You certainly enjoyed it, and you have some residual fondness now. You still read terrible trashy villainess isekai, after all! It's part of you. Still. If you could have gone back and redirected your younger self into something else, like basketball or rock climbing or fanfiction writing, maybe that would have been better.
+
+Oh well. It is what it is.
+<<include [[DOWN_DOWNSTAIRS_BUTTONS]]>>

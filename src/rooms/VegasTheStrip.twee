@@ -1,0 +1,11 @@
+:: VEGAS_THE_STRIP [VEGAS ROOM] {"position":"2100,1250","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "The Vegas Strip")>>
+    <<set $firstEntry to false>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+
+/* TODO: Content! */

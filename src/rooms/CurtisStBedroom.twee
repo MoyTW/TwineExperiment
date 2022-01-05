@@ -1,0 +1,203 @@
+:: CURTIS_ST_BEDROOM [CURTIS_ST ROOM] {"position":"600,625","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "Your bedroom at Curtis St.")>>
+    <<set $firstEntry to false>>
+	<<set $b1Enabled to true>>
+	<<set $b2Enabled to true>>
+	<<set $b3Enabled to true>>
+	<<set $b4Enabled to true>>
+	<<set $b5Enabled to true>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+You shared it with Vincent until you left for college. Well, that's not quite accurate. You shared it with Vincent until you moved onto the couch, and stayed on the couch until you left for college. But you spent the majority of your childhood sleeping in this room.
+
+In retrospect, it seems kind of strange that your parents had their daughter and son share a room into their teenage years. The house wasn't wanting for rooms. On the other hand, you and Vincent never came into conflict. They probably didn't want to incite a tantrum.
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+:: CST_BEDROOM_BUTTONS {"position":"725,625","size":"100,100"}
+<hr>
+<<if not hasVisited('CBR_YBED_1')>>\
+  <<button [[Your bed: There's a hole in the wall here.|CBR_YBED_1]]>><</button>>
+<<elseif not hasVisited('CBR_YBED_2')>>\
+  <<button [[Your bed: Your mom called the police.|CBR_YBED_2]]>><</button>>
+<<elseif $b1Enabled>>\
+  <<button [[Your bed: Leave it well enough alone.|CBR_YBED_3]]>>
+    <<set $b1Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Your bed: There's nothing good here.</button>
+<</if>>\
+<<if not hasVisited('CBR_VBED_1')>>\
+  <<button [[Vincent's bed: Same as it always was.|CBR_VBED_1]]>><</button>>
+<<elseif $b2Enabled>>\
+  <<button [[Vincent's bed: Super weird, when you think about it.|CBR_VBED_2]]>>
+    <<set $b2Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Vincent's bed: Vincent was a saint.</button>
+<</if>>\
+<<if not hasVisited('CBR_DRESSER_1')>>\
+  <<button [[Your dresser: You've had it for as long as you can remember.|CBR_DRESSER_1]]>><</button>>
+<<elseif $b3Enabled>>\
+  <<button [[Your dresser: You'll keep it until it dies or you do.|CBR_DRESSER_2]]>>
+    <<set $b3Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Your dresser: Funny how you're so attached to it.</button>
+<</if>>\
+<<if $b4Enabled>>\
+  <<button [[Your desk: Sturdy wood, with drawers.|CBR_YDESK]]>>
+    <<set $b4Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Your desk: You have no idea what happened to it.</button>
+<</if>>\
+<<if not hasVisited('CBR_VDESK_1')>>\
+  <<button [[Vincent's desk: An identical model to yours.|CBR_VDESK_1]]>><</button>>
+<<elseif $b5Enabled>>\
+  <<button [[Vincent's desk: He left it when he left for college.|CBR_VDESK_2]]>>
+    <<set $b5Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Vincent's desk: Still sitting in storage.</button>
+<</if>>\
+
+
+:: CBR_YBED_1 {"position":"850,425","size":"100,100"}
+<h2 class='passage-header'>Weak Walls</h2>\
+You're lucky you didn't hit a stud. Your parents patched the hole, but the patch left a mark. The paint doesn't quite match.
+
+You remember a conversation with a therapist once. This was before you made the hole. You were talking about anger management. You told her you might hit a wall, but if you did, you'd put a pillow in front of it, so you wouldn't accidentally hurt your hand. You remember feeling so smug, thinking that <em>obviously</em> nobody needed to worry about you injuring yourself by hitting a wall. You thought that that was the reason they were talking to you about hitting the wall, and if you just proved you wouldn't injure yourself they'd let you leave.
+
+God, did you really think that? How did anybody take you seriously at all?
+
+Hilarious in hindsight, but to your parents, it was heartbreaking.
+
+<<updateTerror 3>>\
+<<addMemory
+  "Hand versus wall.",
+  "It was bad, but the whole absurdity of you bragging about not punching a wall barehanded and then doing literally that is just too much.",
+  -1, 0, 100>>\
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_YBED_2 {"position":"950,425","size":"100,100"}
+<h2 class='passage-header'>Different Time</h2>\
+She called them when you "attempted" suicide, not when you hit the wall. Kind of farcial. You sat in bed with an exacto knife and scored your wrists. Didn't break skin. Mostly to spite Mom. Scare her.
+
+It worked.
+
+She called the police. She shouted over the phone that they needed to come take you away. They asked her what you were doing. She told her that you were sitting in your room was suicidal. You think they asked her if you were dangerous or actively attempting suicide or something, and she said no, but she was barely coherent and kept insisting they come to take you away. You felt guilty for making her waste their time. After all, you thought, she was clearly overreacting. You came down from the bedroom and yelled at her. Something like, "Mom, I'm not a danger to myself or others! They won't come! Stop bothering the police! You can't call the police just because somebody is sulking in their room!"
+
+God. What the hell. When's the last time you thought about this? What the hell did you do? And you never talked to her afterwards, never apologized. Just buried it.
+
+<<updateTerror 3>>\
+<<addMemory
+  "Tormenting Mom.",
+  "You put your parents through so much, and you never went back and apologized. There's a part of you that doesn't want to, that still screams that you need to make them suffer. That's only part of why, though. The real reason is you digging up skeletons hurts.",
+  6, 0, 100>>\
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_YBED_3 {"position":"1050,425","size":"100,100"}
+<h2 class='passage-header'>Here Again</h2>\
+No. Think about something else.
+
+<<updateTerror 1>>\
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_VBED_1 {"position":"850,525","size":"100,100"}
+<h2 class='passage-header'>Unnervingly Familiar</h2>\
+At some point you started taking up the habit of just stealing Vincent's bed. You'd go to sleep before him, just using his bed instead of yours. Or you'd nap in his bed. Not always, of course, but often enough to be a serious problem. Your parents told you to stop doing it. You didn't.
+
+You could tell that he wasn't thrilled about this, but he never complained. He was probably happy when you abandoned your bedroom for the couch.
+
+You've never told anybody about this. You wouldn't know how to, at least not without coming across as insane, or crazy, or really messed up. It made you feel safe. God. What does that imply?
+
+<<updateTerror -3>>\
+<<addMemory
+  "Stealing Vincent's bed.",
+  "Hilarious, in retrospect. Like so much of your youth.",
+  -1, 0, 100>>\
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_VBED_2 {"position":"950,525","size":"100,100"}
+<h2 class='passage-header'>Deeply Creepy</h2>\
+Not normal. Not at all. Who steals their younger brother's bed? Nobody healthy.
+
+Is it weirder if an older brother steals his younger brother's bed? An older sister stealing her younger sister's bed? An older brother stealing his younger sister's bed?
+
+Oh, wow, that last one is definitely the creepiest. No contest. None of them are normal but, God, that last one, that's just...that's just messed up.
+
+Who are you to accuse? Maybe they have their reasons. Kids can be weird. Depression can make you do weird things. Who knows?
+
+It's all hypothetical, anyways.
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_DRESSER_1 {"position":"850,625","size":"100,100"}
+<h2 class='passage-header'>Old Reliable</h2>\
+Big. Heavy. Wood. Three small drawers, two wide drawers, one cabinet.
+
+You've taken it everywhere you've moved, except for that one internship in Iowa. Otherwise, it followed you from home to college to home again, then to you first, second, and third apartments. You have it in the house you're renting, too.
+
+Never let you down.
+
+<<updateTerror -3>>\
+<<addMemory
+  "Your dresser.",
+  "Moving it is always a pain. It's very heavy, so stairs are a real problem.",
+  -1, 0, 100>>\
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_DRESSER_2 {"position":"950,625","size":"100,100"}
+<h2 class='passage-header'>Its Contents?</h2>\
+Plain, mostly. A little baggy. Boring.
+
+It's not that you don't know what looks good. You do. It's that shopping is stressful, and unfun, and you don't really have any friends who you feel comfortable asking to help, and anyways, you'd feel self-conscious wearing anything nice so it's not that bad that you barely shop, is it?
+
+Some things change slower than others. Oh well, if you wait long enough you'll just be old and nobody will care. That's how this works, right?
+
+Anyways, dresser, you've got nothing to do with those body issues. You're great. Don't you let those ramblings get you down, dresser.
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_YDESK {"position":"850,725","size":"100,100"}
+<h2 class='passage-header'>Barely Used</h2>\
+You hated studying in your room. When you did, do it lying on the floor.
+
+Mostly you studied in the living room. Problematic with your parents, but you managed to keep your grades up. They were willing to make that tradeoff.
+
+You used your desk for some light drawing, in middle school. Never gained enough confidence, though. Dropped it after a couple of years.
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_VDESK_1 {"position":"850,825","size":"100,100"}
+<h2 class='passage-header'>Well Used</h2>\
+Vincent studied at his desk, and frequently. He was a dutiful, industrious son. A model son. Science Bowl, Model UN, basketball. GPA of 4.3, the highest possible GPA. Had lots of friends. Good at piano. Played in recitals. Stanford. Excellent grades. Well-paying job.
+
+He was so different than you. Still is.
+
+When he got into Stanford you burst with pride. Strange, isn't it? When you attended his graduation you think you cried. Go, Vincent! Go, live a happy life! Go make a lot of money, get married, have kids (or not, if you decide otherwise)!
+
+<<updateTerror -3>>\
+<<addMemory
+  "Vincent's graduation.",
+  "You're glad that you didn't manage to ruin him. He was one of the few who seemed to survive you undamaged. Maybe he was just so good that you couldn't ruin him, maybe you somehow managed to hold back with him, maybe, maybe, maybe.\n\nYou're happy that he's doing well.",
+  -8, 0, 100>>\
+<<include [[CST_BEDROOM_BUTTONS]]>>
+
+
+:: CBR_VDESK_2 {"position":"950,825","size":"100,100"}
+<h2 class='passage-header'>Empty Nest</h2>\
+After both their children left for college your parents converted the bedroom into a storage room. Dad's games and basketball paraphanelia piled up. Mom stacked folding chairs and filled the closet with tablecloths. All Vincent's old schoolwork ended up in plastic boxes, stacked neatly.
+
+You're not sure if they saved your old schoolwork. Probably not.
+<<include [[CST_BEDROOM_BUTTONS]]>>

@@ -1,0 +1,191 @@
+:: CURTIS_ST_MIDDLE_BATHROOM [CURTIS_ST ROOM] {"position":"600,825","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "The Middle Bathroom")>>
+    <<set $firstEntry to false>>
+	<<set $b1Enabled to true>>
+	<<set $b2Enabled to true>>
+	<<set $b3Enabled to true>>
+	<<set $b4Enabled to true>>
+	<<set $b5Enabled to true>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+This was your favorite bathroom when you were growing up (the house had three). The shower was nice and hot, there was plenty of countertop near the sink, and the mirror was huge and pristine.
+
+You spent a troubling amount of time here. It was the most comfortable room in the house. Nobody bothers you when you're in the bathroom.
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+:: MIDDLE_BATHROOM_BUTTONS {"position":"725,825","size":"100,100"}
+<hr>
+<<if not hasVisited('MBR_MIRROR_1')>>\
+  <<button [['Look in the mirror.'|MBR_MIRROR_1]]>><</button>>
+<<elseif $b1Enabled>>\
+  <<button [['Look in the mirror.'|MBR_MIRROR_2]]>>
+    <<set $b1Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Look in the mirror.</button>
+<</if>>\
+<<if $b2Enabled>>\
+  <<button [['Run the sink.'|MBR_SINK]]>>
+    <<set $b2Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Run the sink.</button>
+<</if>>\
+<<if not hasVisited('MBR_SHOWER_1')>>\
+  <<button [['Pull the shower curtains aside.'|MBR_SHOWER_1]]>><</button>>
+<<elseif not hasVisited('MBR_SHOWER_2')>>\
+  <<button [['Run the shower.'|MBR_SHOWER_2]]>><</button>>
+<<elseif not hasVisited('MBR_SHOWER_3')>>\
+  <<button [['Take a shower.'|MBR_SHOWER_3]]>><</button>>
+<<elseif $b3Enabled>>\
+  <<button [['Reminisce about the shower.'|MBR_SHOWER_4]]>>
+    <<set $b3Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Reminisce about the shower.</button>
+<</if>>\
+<<if $b4Enabled>>\
+  <<button [['Examine the toilet.'|MBR_TOILET]]>>
+    <<set $b4Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Examine the toilet.</button>
+<</if>>\
+<<if $b5Enabled>>\
+  <<button [['Check the trash.'|MBR_TRASH]]>>
+    <<set $b5Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Check the trash.</button>
+<</if>>\
+
+
+:: MBR_MIRROR_1 {"position":"525,950","size":"100,100"}
+<h2 class='passage-header'>Ugly Asian</h2>\
+Did you really look like that, back then? Or is that what you think you would have looked like, if you could remember? You don't know. You screamed at your parents whenever they took your picture. The only ones you have are family photos, taken with your extended family. Of course you didn't scream then. That would have been disgraceful.
+
+But you never looked at those photos.
+
+Your friends had photos of their family and extended family on display in places of honor, full of smiling kids and proud parents. Your parents never put any of your photos up in your house. They knew you'd throw a tantrum if they did.
+
+Did you really look like that? With all that time you spent staring into the mirror, you'd think you could remember. What's staring back at you is grotesque and bloated, all flabby and fat and dull eyes, but you do remember your weight, for each and every year since middle school.
+
+Obsessive? Yes. But numbers are numbers, and you didn't weigh enough to look like <em>that.</em>
+
+<<updateTerror 2>>\
+<<addMemory
+  "Screaming at the camera.",
+  "They just wanted pictures of their kids.",
+  13, 0, 100>>\
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+
+:: MBR_SINK {"position":"625,950","size":"100,100"}
+<h2 class='passage-header'>Wasting Water</h2>\
+You listen to it run.
+
+It's a nice sink. Mom kept it clean. Very clean. She'd be ashamed if she saw yours.
+
+You turn it off.
+
+It's a dream. Does it matter? Still, habit.
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+
+:: MBR_SHOWER_1 {"position":"725,950","size":"100,100"}
+<h2 class='passage-header'>The Shower</h2>\
+Spacious. Nice. Clean. Just how you remember it.
+
+For a while, the plumbing was kind of broken and it would never go below a certain heat.
+
+The heat was fine by you. You liked hot showers. The dermatologist said you shouldn't take hot showers, and you shouldn't take long showers, but you defied both commandments.
+
+Your skin hated you. You went through so much moisturizing cream. The shower's weren't the only reason, of course, but they contributed.
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+
+:: MBR_TOILET {"position":"825,950","size":"100,100"}
+<h2 class='passage-header'>Always Spotless</h2>\
+Everybody in the house was very clean, that Mom made sure of. Of the three bathrooms in the house, this toilet was the largest and sturdiest. The one in the down downstairs bathroom was functional, but seemed old and rickety, and the one on the top floor was for your parents.
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+
+:: MBR_TRASH {"position":"925,950","size":"100,100"}
+<h2 class='passage-header'>Like Clockwork</h2>\
+Mom would empty every trash bin in the house every night. She washed dishes, did laundry, and cleaned the house like it was her job. Well, you suppose it was, to her.
+
+You appreciate it, now. Time helped. But you will never tell her that.
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+
+:: MBR_SHOWER_2 {"position":"725,1050","size":"100,100"}
+<h2 class='passage-header'>Safe Haven</h2>\
+You turn the heat to its highest. You take a towel from the towel cabinet and lay it down on the floor. Your clothes go on the counter.
+
+You sit on the floor and listen to the shower.
+
+You wonder what your parents thought of you hour-long showers. Did they think that you were showering the whole time?
+
+Of course, you knew you were wasting water.
+
+Steam fills the room. You pull your knees up to your chest, close your eyes, time vanishes in a cloud of warmth.
+
+<<updateTerror -2>>\
+<<addMemory
+  "Running the shower.",
+  "You're back in middle school, sitting on a towel on the floor, warm steam surrounding you, listening to the hissing of the shower, a place where nobody will bother you and nothing bad can happen.",
+  -10, 0, 100>>\
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+
+:: MBR_SHOWER_3 {"position":"725,1150","size":"100,100"}
+<h2 class='passage-header'>Shower Thoughts</h2>\
+You take a towel from the cabinet and hang it on the hook. You step in, pull the curtains behind you.
+
+The water is hot, almost too hot. Certainly too hot to be healthy. You take the soap (special soap, soft on the skin, as recommended by the dermatologist) and rub your arms. Little flakes of white detritus slough off your disgusting body. You'll have to cover yourself in cream when you get out. You leave the heat be.
+
+The shampoo is special, too; anti-dandruff. You rub it in, wash your hands near the showerhead. You would gouge your scalp with your nails when you were young, so your parents shaved your head, in hopes that it would help. When you went to school that day you felt like a freak.
+
+Thank fuck for dermatologists.
+
+You wash out the shampoo, rub in some conditioner.
+
+If you ever had to do chemo, well, wouldn't that be funny? May as well just go jump off a bridge.
+
+That's an intrusive thought. Stop that. And it's wrong to think less of somebody just because they don't have hair. Even if it might be the only part of your body that you're proud of.
+
+Fuck. Fuck! What the fuck is self-image, anyways?
+
+You rinse out your hair. You close your eyes. You let the water wash all your worries away.
+
+<<updateTerror -1>>\
+<<addMemory
+  "Taking a shower.",
+  "Once you just sat on the floor of the shower under its too-hot water for something like an hour and a half.\n\nWhy do you remember that fondly? That's an absurd thing to remember fondly.",
+  -7, 0, 100>>\
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+
+:: MBR_SHOWER_4 {"position":"725,1250","size":"100,100"}
+<h2 class='passage-header'>Bizarre, Really</h2>\
+Mom and Dad never commented on your showers.
+
+That's weird, right? That's weird. If I had a kid and they were spending two hours running the shower, I'd - I'd be worried, at least. Right?
+
+They probably noticed. They probably just didn't want to argue about it.
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>
+
+
+:: MBR_MIRROR_2 {"position":"525,1050","size":"100,100"}
+<h2 class='passage-header'>Not Beautiful</h2>\
+You aren't in love with how you look now. But you don't hate it.
+
+No. That's a lie.
+
+But you don't let it cripple you.
+<<include [[MIDDLE_BATHROOM_BUTTONS]]>>

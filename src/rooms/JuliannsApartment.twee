@@ -1,0 +1,142 @@
+:: JULIANNS_APARTMENT [JULIANN ROOM] {"position":"275,1975","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "Juliann's Apartment")>>
+    <<set $firstEntry to false>>
+	<<set $b1Enabled to true>>
+	<<set $b2Enabled to true>>
+	<<set $b3Enabled to true>>
+	<<set $b4Enabled to true>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+It's small, but cheery. Two bedrooms, one bathroom, a common area, a kitchen. Juliann had a roommate but you never met her. Or maybe you did? Well, if you did, she clearly didn't leave much of an impression.
+
+There's a shoe rack near the door, as is traditional. The walls have a combination of movie posters (mostly obscure science fiction stuff that you're not super familiar with) and colorful cloth hangings. There's a map of Middle Earth hanging over the table, covered by a bright tablecloth. Even the laptop looks happy to be there. It's all clean. Cheery. Normal.
+<<include [[JANN_APARTMENT_BUTTONS]]>>
+
+:: JANN_APARTMENT_BUTTONS {"position":"275,2100","size":"100,100"}
+<hr>
+<<if not hasVisited('J_APT_TABLE_1')>>\
+  <<button [[Juliann's table: You played board games here once.|J_APT_TABLE_1]]>><</button>>
+<<elseif $b1Enabled>>\
+  <<button [[Juliann's table: Covered by a nice tablecloth.|J_APT_TABLE_2]]>>
+    <<set $b1Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Juliann's table: Probably gone now.</button>
+<</if>>\
+<<if not hasVisited('J_APT_LPT_1')>>\
+  <<button [[Juliann's laptop: She does a lot of video calls.|J_APT_LPT_1]]>><</button>>
+<<elseif $b2Enabled>>\
+  <<button [[Juliann's laptop: She's not as online as you.|J_APT_LPT_2]]>>
+    <<set $b2Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Juliann's laptop: You wish you'd been born before computers.</button>
+<</if>>\
+<<if not hasVisited('J_APT_UTEN_1')>>\
+  <<button [[Juliann's kitchen equipment: She cooks. You don't, really.|J_APT_UTEN_1]]>><</button>>
+<<elseif $b3Enabled>>\
+  <<button [[Juliann's kitchen equipment: Junk food, stress eating.|J_APT_UTEN_2]]>>
+    <<set $b3Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Juliann's kitchen equipment: Won't ever be happy, you think.</button>
+<</if>>\
+<<if $b4Enabled>>\
+  <<button [[Juliann's chairs: Taken from Betty's spares.|J_APT_CHAIRS]]>>
+    <<set $b4Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Juliann's chairs: You make do with folding chairs.</button>
+<</if>>\
+
+
+:: J_APT_LPT_1 {"position":"225,2225","size":"100,100"}
+<h2 class='passage-header'>Long-Distance Calls</h2>\
+Once, after college, you were hanging out at her apartment. After dinner, or maybe before dinner, you're not sure. Point is, you were hanging out. She had some call scheduled with somebody she'd met in Chile, where she'd done some NGO work, and of course she took it (the correct thing to do) and so you sat in the corner, awkwardly fiddling with your phone, while she talked to some random Chilean in Spanish. After maybe half an hour, she finished the call, and you kept on talking about whatever it was you were talking about.
+
+You can't recall what it was you were talking about. All you can recall is that feeling of resentment, for stealing Juliann's time, and the shame, for your resentment.
+
+Real messed up.
+
+<<updateTerror 2>>\
+<<addMemory
+  "Juliann's Chile call.",
+  "You can't really get away from that creeping fear that Juliann doesn't really like you, that she just humors you because you've known each other so long, that the reason it's so hard to get in touch with her is because you're just not that fun to be around.\n\nYou know it's false, but do you really? Is that just you deluding yourself? It doesn't feel false, but you've learned not to trust how you feel.",
+  7, 0, 100>>\
+<<include [[JANN_APARTMENT_BUTTONS]]>>
+
+
+:: J_APT_LPT_2 {"position":"225,2325","size":"100,100"}
+<h2 class='passage-header'>No Need</h2>\
+She's social, well-adjusted, friendly. She has a huge number of friends, at least compared to you. She spends barely any time online.
+
+You once read that somebody had made a point of never eating dinner alone. You're not sure where. A self-help book? A newspaper column? Reddit? The quote stuck with you as some sort of weird impossibility. Juliann could definitely do that, though. She might have to fill in a few dinners with dates but you're pretty confident she could get there, or almost get there, just with friends.
+
+Sometimes, she'll text you in the afternoon. Hey, short notice, it'd read, are you free tonight? Wanna get dinner? Always on short notice. If you don't respond within an hour or two, she'll invariably have retracted the offer.
+<<include [[JANN_APARTMENT_BUTTONS]]>>
+
+
+:: J_APT_UTEN_1 {"position":"325,2225","size":"100,100"}
+<h2 class='passage-header'>Well Used</h2>\
+A stand mixer. A pasta attachment. Three pans. A big pot. A quick-read thermometer. A food processor. Some other stuff you can't identify.
+
+Baking is her thing, but she's also a great cook. She cooked with her mom and she was good at it.
+
+That was something you always felt mixed messages on. Mom and Betty put a lot of stock in being wives. Juliann tried to please Betty, and learned all the wifely skills. You, on the other hand, were both bad-tempered and very American. Is that how you should put it? You're not sure. Maybe that's just a thin ideological excuse for your fury. All you know is that you resented the expectation that you should know how to cook and acted accordingly, with screaming and tantrums.
+
+That didn't stop you feeling ashamed, it just meant that Mom stopped trying to teach you.
+
+Well, you regret that. Cooking is a vital life skill. Plus, screaming at Mom for trying to teach you is somewhere between ungrateful and cruel. Would've been better if you'd listened. Even now you don't know how to cook, and it's done you no favors in the health and weight department. Now cooking is trendy and cool. Or maybe it always was, and you'd just been in the wrong social circles. Or maybe, or maybe, or maybe.
+
+You tried to learn to cook, after college, but you got frustrated and angry and stopped almost immediately. You didn't try again.
+
+<<updateTerror 2>>\
+<<addMemory
+  "You can't cook.",
+  "Home cooking is healthier! Home cooking is cheaper! Home cooking is less wasteful, more environmentally friendly, more virtuous! Where are you going with this? What's the point of thinking about this? Who knows! All you know is that when you meet somebody and you chat and they start talking about what they had for dinner there's that shame that rushes back up and you feel sick for eating unhealthily, for the cheap takeout and microwave dinners, for being low class and unworthy and a failure of a woman, a failure of a human being, a dirty, unwashed, uncultured idiot who can't even cook her own food, like a giant baby.\n\nYou try not to think about this kind of stuff.",
+  9, 0, 100>>\
+<<include [[JANN_APARTMENT_BUTTONS]]>>
+
+
+:: J_APT_UTEN_2 {"position":"325,2325","size":"100,100"}
+<h2 class='passage-header'>Self Sabatage</h2>\
+Used to be worse than it is now. You've managed to get better, you think. You've lost weight. Buy less junk.
+
+Still, it's always there. Won't ever go away. Just another part of you. Forever, right? You guess. Doomed to this misery forever.
+<<include [[JANN_APARTMENT_BUTTONS]]>>
+
+
+:: J_APT_CHAIRS {"position":"425,2225","size":"100,100"}
+<h2 class='passage-header'>Cheap Cheerful</h2>\
+The chairs match the table. They're light, for easier movement. Juliann had a couch in front of the TV, but the couch only sat two, and so the chairs would shift around the apartment a lot, depending on what the last group of visitors was doing.
+
+She had parties a couple of times a week. Not big ones. The weeks where she wasn't hosting, she usually went to other peoples'. Where did she find the energy?
+<<include [[JANN_APARTMENT_BUTTONS]]>>
+
+
+:: J_APT_TABLE_1 {"position":"125,2225","size":"100,100"}
+<h2 class='passage-header'>Only Once</h2>\
+Juliann invited you. You're not sure what the occasion was, if there was any occasion. It's rare for her to invite you to things, even rare to invite you to group things, since she's always so busy. She has so many friends, and her schedule's always overbooked. When she invites you to things it usually feels like she's squeezing you in, in the few moments that she has free, and try to set anything up feels less like hanging out with a friend than scheduling a meeting.
+
+You don't remember exactly what you played. You're not a big fan of boardgames. She picked them up in college. Still, you came along. There were five people total, two other guys there who you'd never met and a girl that must have been her roommate? You don't really remember any of them, this was years ago. The game had something to do with King Arthur, and somebody was a traitor.
+
+You remember having fun, though you being you, you're not sure it showed. Did she keep hosting them? If she did, she never invited you back.
+<<updateTerror -2>>\
+<<addMemory
+  "Juliann's game night.",
+  "Thinking about it more, you're pretty sure you know why she never invited you back.\n\nAfter the whole thing was done, she asked you what you thought of it, and your response was something like, the games have a lot of rules and are pretty complicated. Which was true! But if you say that, and you don't add that you had fun and would want to do it again, it's not unreasonable to think you didn't have fun.\n\nSmall steps, though. You'll get there eventually.",
+  -6, 0, 100>>\
+<<include [[JANN_APARTMENT_BUTTONS]]>>
+
+
+:: J_APT_TABLE_2 {"position":"125,2325","size":"100,100"}
+<h2 class='passage-header'>Cheap Classy</h2>\
+The table was a folding table, bought for cheap, but the tablecloth she draped over it was beautiful and elegant and very intricate, white with red and gold patterns worked into it.
+
+She has a good aesthetic sense, and good spending habits too. She diverges in a lot of ways with her parents, but as far as money goes, Betty was entirely successful in her daughter's education.
+<<include [[JANN_APARTMENT_BUTTONS]]>>

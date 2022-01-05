@@ -1,0 +1,163 @@
+:: BETTYS_LIVING_ROOM [JULIANN ROOM] {"position":"275,1725","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "Betty's Living Room")>>
+    <<set $firstEntry to false>>
+    <<set $b1Enabled to true>>
+	<<set $b2Enabled to true>>
+	<<set $b3Enabled to true>>
+	<<set $b4Enabled to true>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+You don't see Betty and Lawrence much, not since you moved out. They come to the family Thanksgiving and Christmas parties sometimes, but they skip them just as often. You know Mom still talks to Betty though, almost every day. They go on walks together, talk, gossip.
+
+Betty is from China, first generation. She's nice, but you never talk politics with her or Lawrence. You don't envy Juliann. Sometimes Betty tries to complain to her about crime and black people and how black people do lots of crime.
+
+You might have your own hangups about your parents, but at least they don't do that.
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>
+
+:: BTY_LIVING_ROOM_BUTTONS {"position":"275,1600","size":"100,100"}
+<hr>
+<<if not hasVisited('B_LVR_TV_1')>>\
+  <<button [[Betty's TV: Sometimes you'd watch movies with Juliann.|B_LVR_TV_1]]>><</button>>
+<<elseif not hasVisited('B_LVR_TV_2')>>\
+  <<button [[Betty's TV: You remember watching Bush v. Gore here, too.|B_LVR_TV_2]]>><</button>>
+<<elseif $b1Enabled>>\
+  <<button [[Betty's TV: Politics was always fraught.|B_LVR_TV_3]]>>
+    <<set $b1Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Betty's TV: Only fond memories.</button>
+<</if>>\
+<<if $b2Enabled>>\
+  <<button [[Betty's couch: Cheap, but good quality.|B_LVR_COUCH]]>>
+    <<set $b2Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Betty's couch: Betty was good with money.</button>
+<</if>>\
+<<if not hasVisited('B_LVR_BOOKSHELVES_1')>>\
+  <<button [[Betty's bookshelves: Mostly textbooks.|B_LVR_BOOKSHELVES_1]]>><</button>>
+<<elseif $b3Enabled>>\
+  <<button [[Betty's bookshelves: Asian parents, right?|B_LVR_BOOKSHELVES_2]]>>
+    <<set $b3Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Betty's bookshelves: Juliann got the last laugh.</button>
+<</if>>\
+<<if not hasVisited('B_LVR_TABLE_1')>>\
+  <<button [[Betty's table: Full of receipts and invoices and timesheets.|B_LVR_TABLE_1]]>><</button>>
+<<elseif $b4Enabled>>\
+  <<button [[Betty's table: She really did pull herself up by her bootstraps.|B_LVR_TABLE_2]]>>
+    <<set $b4Enabled to false>>
+  <</button>>
+<<else>>\
+  <button disabled>Betty's table: That's how a lot of immigrants think.</button>
+<</if>>\
+
+
+:: B_LVR_TV_1 {"position":"125,1475","size":"100,100"}
+<h2 class='passage-header'>Science Fiction</h2>\
+Her bent, not yours. You watched Lynch's <em>Dune</em> at her place. It left an impression on you, though all you can remember now is that you made hot chocolate. Once, in college, it came up. Right at the beginning of the school year, on that first day when everybody was moving in, you met a tall boy and tiny girl and it came up, somehow. How? Who knows. Anyways, you think you got some nerd cred out of that. Totally unearned. You knew anime, not sci-fi. That isn't to say you objected to her choices, just that they were different from yours.
+
+To be honest, you mostly picked anime. <em>Princess Mononoke. Nausicaa. Millenium Actress.</em> Mostly big names. You had a thing, and you stuck with it.
+
+<<updateTerror -2>>\
+<<addMemory
+  "Movies with Juliann.",
+  "You watched pretty reasonable number of movies with her, but you really can't remember most of them. Funny, since you usually have a pretty good movie memory. On the other hand, it was half a lifetime ago. You're sure you'd recognize them if you saw the names.",
+  -1, 0, 100>>\
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>
+
+
+:: B_LVR_TV_2 {"position":"125,1375","size":"100,100"}
+<h2 class='passage-header'>Florida, 2000</h2>\
+You had your political tendencies set pretty early. Juliann was more agnostic, and her parents were opposite yours, staunch Republicans. You watched live on their TV, but the vibe was more sporting match than existential struggle.
+
+God. What a bizarre election. And then came 9/11, and everybody's brains broke, and the War on Terror, and, and, and.
+
+<<updateTerror 2>>\
+<<addMemory
+  "The War on Terror.",
+  "God. What a mess.",
+  4, 0, 100>>\
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>
+
+
+:: B_LVR_TV_3 {"position":"125,1275","size":"100,100"}
+<h2 class='passage-header'>Friendly Regardless</h2>\
+Your families were friends first, Chinese-American second, and Democrats or Republicans last. Politics came up, and they still do, but in the end it's only a minor point of friction.
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>
+
+
+:: B_LVR_COUCH {"position":"225,1475","size":"100,100"}
+<h2 class='passage-header'>Cheap Classy</h2>\
+Betty had (has still) a lot of money, but she never spent anything she didn't need to. Respectable furniture, however, was a necessity, and the couches she bought were good quality, built to last, and pretty. She would point to them proudly. Ah, she said, I got a good deal on these! Only two hundred seventy nine dollars! And everybody would be suitably impressed.
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>
+
+
+:: B_LVR_BOOKSHELVES_1 {"position":"325,1475","size":"100,100"}
+<h2 class='passage-header'>Pressure Cooker</h2>\
+Juliann had it bad. She was smart, studious, and eager to please, but the expectations still got to her. Private schools, after-school tutoring, college prep. She went to Berkeley, in the end - extremely respectable, but surely she could have done better?
+
+Juliann's mom was always complaining. Oh, she say to the other parents, Juliann, she's so lazy, she's always gossiping instead of studying! Then Steven's mom would say something like, You should see my son! He spends so much time playing games! Your daughter plays the piano so well! and Betty would say No, no, Steven is such a good son, he listens to his parents, unlike my lazy daughter! and then Andrew's mom would chime in and...
+
+You asked Mom about this. Why she always complained about Vincent, but hardly mentioned you. Why Betty always complained about Juliann. Weren't they happy? Juliann did everything Betty asked. Lawrence was such a good son.
+
+Did you ask her, or did you accuse her? It was so long ago.
+
+She told you that it was how parents showed they were proud of their children. To your yonger self, it was a baffling answer.
+
+<<updateTerror 2>>\
+<<addMemory
+  "Juliann's education.",
+  "Your parents eventually gave up on you and let up. Tempered their expectations. But Juliann was smart, and dutiful, and hardworking, everything a parent could ask for. So they did. Never too much more, never anything impossible. Just a little more, every time. She didn't get it as bad as some others, but she got it worse than most.",
+  9, 0, 100>>\
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>
+
+
+:: B_LVR_BOOKSHELVES_2 {"position":"325,1375","size":"100,100"}
+<h2 class='passage-header'>Amy Chua</h2>\
+You remember her book stirring up a lot of controversy. It came out after you'd grown up, after you'd graduated college.
+
+No, that's wrong. You hadn't grown up, then. In fact, you're not sure if you've grown up yet.
+
+You were lucky. Your parents weren't tiger parents. Maybe if you put them together they were a tiger parent. But Juliann's parents were.
+
+Or, maybe, if your parents were both tiger parents you'd have turned out better. More likely you'd have turned out worse.
+
+Don't dwell on it.
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>
+
+
+:: B_LVR_TABLE_1 {"position":"425,1475","size":"100,100"}
+<h2 class='passage-header'>Small Businesses</h2>\
+So much paperwork scattered about, every time you visited.
+
+She owned a computer repair shop. She knew almost nothing about computers themselves. She didn't need to; that was what the employees were for. What she knew was how to manage people and money.
+
+From what you heard, she was tightfisted, but she never pretended she knew more than she did. Her employees seemed to respect her, from the times you hung around the shop, but that might have been because you only visited with Juliann. Maybe they just knew not to insult the owner in the hearing of her daughter.
+
+Betty invested into land. Around here, that was a good investment. She has a lot more money than you'd think, looking at her house and furniture.
+
+There was one time Mom and Betty went out to eat. Mom got the tab. You all happened to be at Betty's house. It came up. As is the Chinese way, they argued bitterly. It's no big deal! Oh, no, no, just take the money. No, really! You don't need to. No, I owe you, take it! At some point, Betty, impatient and frustrated, pulled twenty dollars out of her purse, smacked it down on the table, and then stormed out of the front door of her own house.
+
+You and Juliann almost giggled yourself to death. Mom took the twenty dollars. Point went to Betty.
+
+<<updateTerror -6>>\
+<<addMemory
+  "Betty pays her debts.",
+  "You are not nearly Chinese enough to just slam down a twenty and storm out of your own house, but you have to admit, that's a good trick. There's nobody that wouldn't have taken that twenty after that.",
+  -4, 0, 100>>\
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>
+
+
+:: B_LVR_TABLE_2 {"position":"425,1375","size":"100,100"}
+<h2 class='passage-header'>First Generation</h2>\
+Betty and Larence's politics were solid Republican. They believed in America, the value of hard work, that everybody could make it if they tried.
+
+You can't blame them for it. Where you start and what you're comparing matters. The most ardent libertarian you ever met was a co-worker who immigrated from Russia.
+<<include [[BTY_LIVING_ROOM_BUTTONS]]>>

@@ -1,0 +1,168 @@
+:: STRANGE_PLACE_VOLCANO [STRANGE_PLACE ROOM] {"position":"1575,750","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "Somewhere Strange")>>
+    <<set $firstEntry to false>>
+  <</if>>
+  <<set $canLeave to false>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+<h2 class='passage-header'>$locationName</h2>\
+Stairs stretch out into the darkness ahead of you, lit by dim night lights. A wooden handrail is present, but the walls, wooden too, are otherwise bare. Behind you is the door in which you came.
+
+<<if $SS_Volcano_climbedOnce is false and $SS_Volcano_finished is false>>\
+  A memory, faint, from long ago. Fire and lava? You shiver. The stairs stretch out before you, a maw waiting to swallow you whole.
+  <hr>
+  <<button [[The stairs: Climb.|SS_V_STAIRS_1]]>><</button>>
+<<elseif $SS_Volcano_climbedOnce is true and $SS_Volcano_finished is false>>\
+  You take a deep breath. No. Best find another way.
+  <hr>
+  <button disabled>The Stairs: Sometimes it's best to walk away.</button>
+<<else>>\
+<</if>>
+
+
+:: SS_V_STAIRS_1 {"position":"1575,875","size":"100,100"}
+<<set $canLeave to false>>\
+<<set $canRetreat to false>>\
+<h2 class='passage-header'>Stepping Up</h2>\
+You ascend the stairway for minutes, stair by unchanging stair, higher and higher. Now the lights are starting to dim, even further than they already are. They turn reddish, smoky. The steps are becoming taller, the ceiling receding above your head. The handrail steadily creeps up, from waist height to shoulder height to uncomfortably high. Up and up and there's no end in sight, just an seemingly endless number of slowly growing stairs.
+
+<<updateTerror 1>>\
+<hr>
+<<button [[The stairs: Keep climbing.|SS_V_STAIRS_2]]>><</button>>
+<<button [[The stairs: Turn back.|SS_V_BACK_1]]>><</button>>
+
+
+:: SS_V_STAIRS_2 {"position":"1700,800","size":"100,100"}
+<h2 class='passage-header'>Up, Up</h2>\
+Sweat stains your eyes, the effort of stepping higher and higher taking its toll. Soon they're too high to step, and you resort to holding onto the tall handrails and muscling yourself up, one after another. Then the handrails ascend out of easy reach.
+
+How long have you been climbing? You sit on a step, look up, look back. There's windows ahead. Those are new. They're high on the wall, huge, giving a great view of the stars.
+
+If you were twice, three times as tall as you are now, if you could look down out of those gigantic windows, what would you see? 
+
+Well. You could simply climb past them.
+
+Simply. Right.
+
+<<updateTerror 1>>\
+<hr>
+<<button [[The stairs: Keep climbing.|SS_V_STAIRS_3]]>><</button>>
+<<button [[The stairs: Turn back.|SS_V_BACK_1]]>><</button>>
+
+
+:: SS_V_BACK_1 {"position":"1825,800","size":"100,100"}
+<h2 class='passage-header'>Stepping Down</h2>\
+You turn back and begin to make your way down, holding the handrail carefully. Soon the stairs begin to shrink, and the lights brighten. Your step lightens and you continue down, down, down.
+
+Surely you're near the bottom now, right? Your grasp of time isn't very strong at the best of times, but you've been going down for a while now.
+
+You walk down, down, down.
+
+A terrible suspicion begins to creep into your mind.
+
+<<updateTerror 2>>\
+<hr>
+<<button [[The stairs: Turn around and climb again.|SS_V_STAIRS_1]]>><</button>>
+<<button [[The stairs: Keep descending.|SS_V_BACK_2]]>><</button>>
+
+
+:: SS_V_BACK_2 {"position":"1825,900","size":"100,100"}
+<h2 class='passage-header'>No Bottom</h2>\
+You've spent far longer descending than you have climbing, and there's no sign of the door you came in.
+
+Trapped. No way out. Or, rather, only one way out, going to who knows where.
+
+<<updateTerror 3>>\
+<hr>
+<<button [[The stairs: Turn around and climb again.|SS_V_STAIRS_1]]>><</button>>
+<<button [[The stairs: Keep descending.|SS_V_BACK_2]]>><</button>>
+
+
+:: SS_V_STAIRS_3 {"position":"1700,900","size":"100,100"}
+<h2 class='passage-header'>Enough Resting</h2>\
+The stairs have gotten deeper as well as taller, the red glow more intense, and climbing now requires you to awkwardly grab on to the next level and throw your leg up. Progress is exhausting and slow. You feel like you might slip and fall at any moment, but with no better options, you persevere. Soon you're far up enough to look back down through the windows.
+
+<<updateTerror 1>>\
+<hr>
+<<button [[The windows: Look back.|SSVS_LOOK_1]]>><</button>>
+<<button [[The stairs: Keep climbing.|SSVS_CONT_1]]>><</button>>
+
+
+:: SSVS_LOOK_2 {"position":"1625,1125","size":"100,100"}
+<<set $SS_Volcano_climbedOnce to true>>\
+<<set $canRetreat to true>>\
+<h2 class='passage-header'>Box Breathing</h2>\
+In, count to four. Hold, count to four. Out, count to four. Hold, count to four. In, count to four. Hold, count to four. Out, count to four. Hold, count to four. In, count to four. Hold, count to four. Out, count to four. Hold, count to four.
+
+Okay.
+
+What was that? Where did it even come from? Your house has never burned down. You've never had to evacuate from a fire. You've never even seen a volcano in person. Is it - well, it's a dream. You subconscious. It's probably metaphorical, or something.
+
+Fuck, who knows? It's a dream. Does it have to make sense?
+
+<<updateTerror -4>>\
+<hr>
+<button disabled>The Stairs: You can't go back up there. Not now.</button>
+
+
+:: SSVS_LOOK_1 {"position":"1625,1025","size":"100,100"}
+<h2 class='passage-header'>Red Sky</h2>\
+A raging fire, consuming grass, trees, spitting clouds of ash and behind it an inexorable wave of orange lava, driving the flames before it. A new vigor animates your limbs. You turn back to the stairs, scramble up them as fast as you can. Mom! Dad! You have to run! The fire's coming! Stair by stair, crying out in your weak voice. Mom! Dad! You have to wake up! There's their door, at the top of the stairs. Mom! Dad! Another stair, five more, four more, three more. You reach the landing, trip over your own feet, stumble into the door, scream, fires eating the stairs behind you, but they won't open the door, can't open the door, they're sleeping or gone or dead, and then you look back and the glow of the lava becomes all-encompassing and -
+
+you're back, back at the bottom of the stairs, the normal-sized stairs, and there's the door, you're free, you're safe, it was fine, it was just a nightmare, breathe, breathe, breathe in, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, breathe out, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, breathe in...out...
+
+You're fine. You're fine. Everything's fine, your parents are alive, you're alive, your house is fine, everything's fine. You're fine.
+
+<<updateTerror 15>>\
+<hr>
+<<button [[Just breathe.|SSVS_LOOK_2]]>><</button>>
+
+
+:: SSVS_CONT_1 {"position":"1750,1025","size":"100,100"}
+<h2 class='passage-header'>Higher, Taller</h2>\
+Sweat covers your brow, trickles down. You shake it out of your eyes. Now the air feels thick, and a hot wind blows at your back. The lights dim and dim, a bright glow behind you replacing them, and you can hear a faint crackling from far away. Now the stairs are high as your waist and deep enough to lie in. You throw your arms up, and pull. Throw your arms up, pull.
+
+No end is in sight. Behind you the faint sputtering builds into a muted roar.
+
+<<updateTerror 1>>\
+<hr>
+<<button [[The windows: Look back.|SSVS_LOOK_1]]>><</button>>
+<<button [[The stairs: Keep climbing.|SSVS_CONT_2]]>><</button>>
+
+
+:: SSVS_CONT_2 {"position":"1750,1125","size":"100,100"}
+<h2 class='passage-header'>From Hades</h2>\
+You climb, faster, harder, stair over stair, grabbing and pulling, arms aching and breath short. The stairs grow steadily lighter, the burning behind you closer, the air warmer and warmer.
+
+<<updateTerror 1>>\
+<hr>
+<<button [[The windows: Look back.|SSVS_LOOK_1]]>><</button>>
+<<button [[The stairs: Keep climbing.|SSVS_CONT_3]]>><</button>>
+
+
+:: SSVS_CONT_3 {"position":"1750,1225","size":"100,100"}
+<h2 class='passage-header'>Orpheus Aflame</h2>\
+You climb. You do not look back, though the heat grows and the sizzling sound drowns out your breaths. You do not look back when ash begins to blow past you, when the inferno's glow lights the hallway before you, when the fire reaches the base of the stairs. You do not look back as it races up behind you. When the heat becomes unberable, when your clothes begin to melt into your flesh, when you back begins to crisp and fall, then you scream - but you do not look back.
+
+<<updateTerror 5>>\
+<hr>
+<<button [[The fire: I will not give in.|SSVS_CONT_4]]>><</button>>
+
+
+:: SSVS_CONT_4 {"position":"1750,1325","size":"100,100"}
+<<set $SS_Volcano_climbedOnce to true>>\
+<<set $canRetreat to true>>\
+<h2 class='passage-header'>Not Awake?</h2>\
+No. It seems you can't get away so easily.
+
+Now you're back at the base of the stairs, the door behind you. What a sense of humor this dream has.
+
+Why this, dream? Your house has never burned down. You've never had to evacuate from a fire. You've never seen a volcano in person. So what is this a metaphor for? Or is it as empty as a scene in a movie that scared you when you were a child?
+
+Also, dream, you have no idea what burning feels like. You've never really been burned. The worst you've had was a couple of minor oven accidents. Whatever that was, it hardly hurt. Burning alive probably hurts a lot more than that.
+
+<<updateTerror -1>>\
+<hr>
+<button disabled>The Stairs: Still, not now.</button>

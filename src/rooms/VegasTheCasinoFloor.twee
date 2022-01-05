@@ -1,0 +1,11 @@
+:: VEGAS_THE_CASINO_FLOOR [VEGAS ROOM] {"position":"2100,1350","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "The Casino Floor")>>
+    <<set $firstEntry to false>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+
+/* TODO: Content! */

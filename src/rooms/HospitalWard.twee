@@ -1,0 +1,11 @@
+:: ASTHMA_HOSPITAL_WARD [HOSPITAL ROOM] {"position":"850,1750","size":"100,100"}
+<<nobr>>
+  <<if $firstEntry is true>>
+    <<run setup.onRoomEntered(passage(), "St. Antony's Hospital, Ward")>>
+    <<set $firstEntry to false>>
+  <</if>>
+  <<set $canLeave to true>>
+  <<set $canRetreat to true>>
+<</nobr>>\
+
+/* TODO: Content! */
