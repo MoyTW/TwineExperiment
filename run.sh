@@ -1,2 +1,2 @@
-tweego BadDreamsSadMemories.twee -o /tmp/run.html
-xdg-open /tmp/run.html
+tweego src -o /tmp/tweego_run.html
+xdg-open /tmp/tweego_run.html

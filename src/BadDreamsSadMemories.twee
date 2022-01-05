@@ -459,39 +459,6 @@ Stairs stretch out into the darkness ahead of you, lit by dim night lights. A wo
 <</if>>
 
 
-:: STRANGE_PLACE_LEECHES [STRANGE_PLACE ROOM] {"position":"1450,750","size":"100,100"}
-<<nobr>>
-  <<if $firstEntry is true>>
-    <<run setup.onRoomEntered(passage(), "Somewhere Strange")>>
-    <<set $firstEntry to false>>
-	<<set $SS_Leeches_fromDoor to true>>
-  <</if>>
-  <<set $canLeave to false>>
-  <<set $canRetreat to true>>
-<</nobr>>\
-<h2 class='passage-header'>$locationName</h2>\
-<<if $SS_Leeches_fromDoor is true>>\
-  You open the door and step onto a wooden platform.
-<<else>>\
-  You squish your way back to the platform and climb up, pulling your shoes and socks and pants off, squeezing out as much water as you can. When you replace them, they prove damp and clammy. Ugh.
-<</if>>\
-
-It's midday, with overcast skies. A marsh stretches out before you, replete with tall grasses. Behind the grass barrier, you see a raised platform with three other doors.
-
-The water looks shallow enough to wade, if you're inclined to do so. You lean down at test it. It's warm enough, at least.
-
-Or you could just not. Wading into a marsh is probably unsafe.\
-<<if $SS_Leeches_fromDoor is true>>\
-  Plus, being wet sucks, and wearing wet clothes sucks more.
-<<else>>\
-  Plus, you've already gone out and turned back, getting yourself all clammy and damp in the process, why do it again?
-
-  <<updateTerror 1>>\
-<</if>>\
-<hr>
-<<button [[The swamp: Wade out into the marsh.|SSL_WADE_1]]>><</button>>
-
-
 :: VEGAS_THE_STRIP [VEGAS ROOM] {"position":"2100,1250","size":"100,100"}
 <<nobr>>
   <<if $firstEntry is true>>
@@ -2170,13 +2137,13 @@ Also, dream, you have no idea what burning feels like. You've never really been 
 <h2 class='passage-header'>Wet Wading</h2>\
 You gingerly lower yourself into the water, which comes up to your knees. You begin to wade, small waves marking your passage across the waters, wet shoes smooshing against the soft ground. Soon, you've reached the barrier of marshgrass. You can barely see the tops of the doors behind their green tips.
 <hr>
-<<button [[The grass: Push your way through.|SSS_WADE_2]]>><</button>>
+<<button [[The grass: Push your way through.|SSL_WADE_2]]>><</button>>
 <<button [[The marsh: Turn back.|STRANGE_PLACE_LEECHES]]>>
   <<set $SS_Leeches_fromDoor to false>>
 <</button>>
 
 
-:: SSS_WADE_2 {"position":"1450,1000","size":"100,100"}
+:: SSL_WADE_2 {"position":"1450,1000","size":"100,100"}
 <h2 class='passage-header'>Swampgrass Blues</h2>\
 You swallow and begin to work your way through the swampgrass, first parting it in front of you with your arms and then gingerly stepping through. You're not sure if this is how it's supposed to be done, and the grass isn't cooperating very well. Your feet keep getting stuck in mud or maybe decaying plant matter or something, you're not sure, it's hard to see where your feet are going. How do people do this? How do they avoid holes? Each step is slow, careful, comically exaggerated, until you notice a big black blob on your left arm and a shudder runs through you.
 
